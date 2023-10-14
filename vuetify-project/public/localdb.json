@@ -1,0 +1,76 @@
+{
+  "title": "Vicente Zurita",
+  "subtitle": "Backend Developer",
+  "introParagraph": "I'm a newly graduated analyst programmer with an affinity for backend developement and a passion for learning new technologies. \n I focus on problem solving and producing quality scalable code \n currently living in Marseille, France."
+,
+  "languages":[
+    {
+      "name": "English",
+      "code": "en",
+      "ico":"../src/assets/uk_flag.png"
+
+    },
+    {
+      "name": "Español",
+      "code": "es",
+      "ico":"../src/assets/spain_flag.png"
+    },
+    {
+      "name": "Français",
+      "code": "fr",
+      "ico":"../src/assets/france_flag.png"
+    }
+
+  ],
+
+  "navButtons": [
+    {
+      "sectionName": "Home",
+      "href": "/"
+    },
+    {
+      "sectionName": "About",
+      "href": "/about"
+    },
+    {
+      "sectionName": "Projects",
+      "href": "/projects"
+    },
+    {
+      "sectionName": "Contact",
+      "href": "/contact"
+    }
+  ],
+  "socialMedia":[ 
+    {
+      "name": "LinkedIn",
+      "href": "https://www.linkedin.com/in/vicentezuritachfr/",
+      "icon": "mdi-linkedin"
+    },
+    {
+      "name": "GitHub",
+      "href": "https://github.com/Champulin/",
+      "icon": "mdi-github"}
+  ],"heroPicture": "../src/assets/hero.png",
+ 
+  "techStackPngs": [
+    { "icon": "../src/assets/mongo_logo.png", "name": "MongoDB" },
+    { "icon": "../src/assets/django_logo.png", "name": "Django" },
+    { "icon": "../src/assets/vite_logo.png", "name": "Vite" }
+  ],
+      "techStackIcons": [
+        { "icon": "language-python", "name": "Python" },
+        { "icon": "language-html5", "name": "HTML5" },
+        { "icon": "language-css3", "name": "CSS3" },
+        { "icon": "language-javascript", "name": "JavaScript" },
+        { "icon": "vuejs", "name": "Vue.js" },
+        { "icon": "vuetify", "name": "Vuetify" }
+      ],
+      "devTools": [
+        { "icon": "github", "name": "GitHub" },
+        { "icon": "bitbucket", "name": "Bitbucket" },
+        { "icon": "jira", "name": "Jira" },
+        { "icon": "digital-ocean", "name": "Digital Ocean" }
+      ]
+
+}

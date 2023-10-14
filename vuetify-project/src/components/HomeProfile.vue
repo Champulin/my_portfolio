@@ -74,39 +74,33 @@
 </template>
 
 <script>
-import heroPicture from "@/assets/hero.png";
-import mongoLogo from "@/assets/mongo_logo.png";
-import djangoLogo from "@/assets/django_logo.png";
-import viteLogo from "@/assets/vite_logo.png";
-
 export default {
   data() {
     return {
-      heroPicture,
-      title: "Vicente Zurita",
-      subtitle: "Backend Developer",
-      introParagraph:
-        "I'm a newly graduated analyst programmer with an affinity for backend developement and a passion for learning new technologies. \n I focus on problem solving and producing quality scalable code \n currently living in Marseille, France.",
-      techStackPngs: [
-        { icon: mongoLogo, name: "MongoDB" },
-        { icon: djangoLogo, name: "Django" },
-        { icon: viteLogo, name: "Vite" },
-      ],
-      techStackIcons: [
-        { icon: "language-python", name: "Python" },
-        { icon: "language-html5", name: "HTML5" },
-        { icon: "language-css3", name: "CSS3" },
-        { icon: "language-javascript", name: "JavaScript" },
-        { icon: "vuejs", name: "Vue.js" },
-        { icon: "vuetify", name: "Vuetify" },
-      ],
-      devTools: [
-        { icon: "github", name: "GitHub" },
-        { icon: "bitbucket", name: "Bitbucket" },
-        { icon: "jira", name: "Jira" },
-        { icon: "digital-ocean", name: "Digital Ocean" },
-      ],
+      heroPicture: "",
+      title: "",
+      subtitle: "",
+      introParagraph: "",
+
+      techStackPngs: [],
+      techStackIcons: [],
+      devTools: [],
     };
+  },
+  async mounted() {
+    try {
+      const response = await fetch("/localdb.json");
+      const data = await response.json();
+      this.heroPicture = data.heroPicture;
+      this.title = data.title;
+      this.subtitle = data.subtitle;
+      this.introParagraph = data.introParagraph;
+      this.techStackPngs = data.techStackPngs;
+      this.techStackIcons = data.techStackIcons;
+      this.devTools = data.devTools;
+    } catch (error) {
+      console.error("An error occurred:", error);
+    }
   },
 };
 </script>

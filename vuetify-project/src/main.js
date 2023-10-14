@@ -6,6 +6,7 @@
 
 // Components
 import App from "./App.vue";
+
 //Styles
 import "@/styles/main.scss";
 

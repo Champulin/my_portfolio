@@ -7,13 +7,13 @@
       <v-main>
         <default-view />
       </v-main>
-      <!-- <default-footer /> -->
     </v-layout>
+    <default-footer />
   </v-app>
 </template>
 
 <script lang="js" setup>
-import DefaultBar from "./AppBar.vue";
+import DefaultBar from "@/components/HeaderComponent.vue";
+import DefaultFooter from "@/components/FooterComponent.vue";
 import DefaultView from "./View.vue";
-// import DefaultFooter from "./AppFooter.vue";
 </script>

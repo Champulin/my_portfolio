@@ -1,8 +1,8 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-  <MyPortfolioApp />
+  <HomeProfile />
 </template>
 
 <script lang="js" setup>
-import MyPortfolioApp from "@/components/HomeProfile.vue";
+import HomeProfile from "@/components/HomeProfile.vue"
 </script>
