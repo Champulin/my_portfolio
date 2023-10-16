@@ -1,5 +1,24 @@
 <template>
-  <div class="hero-container">
+  <div
+    id="home"
+    v-if="isDesktop"
+    class="hero-container desktop hidden-sm-and-down"
+  >
+    <div class="hero-card">
+      <div class="row">
+        <div class="column">
+          <div class="photo-container">
+            <img :src="heroPicture" alt="Hero" class="hero-photo" />
+          </div>
+          <div class="column">
+            <h1>{{ $t("message.title") }}</h1>
+            <h2>{{ $t("message.subtitle") }}</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div v-else class="hero-container mobile hidden-md-and-up">
     <div class="hero-card">
       <div class="row">
         <div class="column">
@@ -7,72 +26,68 @@
             <img :src="heroPicture" alt="Hero" class="hero-photo" />
           </div>
         </div>
-        <div class="column">
-          <h1>{{ title }}</h1>
-          <h2>{{ subtitle }}</h2>
-          <div class="resume-paragraph"></div>
-          <p>{{ introParagraph }}</p>
-          <p></p>
-        </div>
+      </div>
+      <div class="column">
+        <h1>{{ $t("message.title") }}</h1>
+        <h2>{{ $t("message.subtitle") }}</h2>
       </div>
     </div>
-    <div class="tech-container">
-      <div class="row">
-        <div class="stack column">
-          <p>Tech Stack |</p>
-        </div>
-        <div class="column">
-          <div class="tech-stack">
-            <div v-for="(item, index) in techStackIcons" :key="index">
-              <v-icon
-                :icon="'mdi-' + item.icon"
-                alt="Tech Icon"
-                class="tech-icon"
-              >
-              </v-icon>
-              <v-tooltip activator="parent" location="bottom">
-                {{ item.name }}</v-tooltip
-              >
-            </div>
-
-            <v-img
-              v-for="(item, index) in techStackPngs"
-              :key="index"
-              :src="item.icon"
+  </div>
+  <div class="tech-container">
+    <div class="tech-row">
+      <div class="stack column">
+        <p>Tech Stack |</p>
+      </div>
+      <div class="column">
+        <div class="tech-stack">
+          <div v-for="(item, index) in techStackIcons" :key="index">
+            <v-icon
+              :icon="'mdi-' + item.icon"
               alt="Tech Icon"
               class="tech-icon"
             >
-              <v-tooltip activator="parent" location="bottom">
-                {{ item.name }}</v-tooltip
-              >
-            </v-img>
+            </v-icon>
+            <v-tooltip activator="parent" location="bottom">
+              {{ item.name }}</v-tooltip
+            >
           </div>
+
+          <!-- <v-img
+            v-for="(item, index) in techStackPngs"
+            :key="index"
+            :src="item.icon"
+            alt="Tech Icon"
+            class="tech-icon"
+          >
+            <v-tooltip activator="parent" location="bottom">
+              {{ item.name }}</v-tooltip
+            >
+          </v-img> -->
         </div>
       </div>
-      <div class="row">
-        <div class="stack column">
-          <p>Dev Tools |</p>
-        </div>
-        <div class="column">
-          <div class="tech-stack">
-            <div v-for="(item, index) in devTools" :key="index">
-              <v-icon
-                :icon="'mdi-' + item.icon"
-                alt="Tech Icon"
-                class="tech-icon"
-              >
-              </v-icon>
-              <v-tooltip activator="parent" location="bottom">
-                {{ item.name }}</v-tooltip
-              >
-            </div>
+    </div>
+    <div class="tech-row">
+      <div class="stack column">
+        <p>Dev Tools |</p>
+      </div>
+      <div class="column">
+        <div class="tech-stack">
+          <div v-for="(item, index) in devTools" :key="index">
+            <v-icon
+              :icon="'mdi-' + item.icon"
+              alt="Tech Icon"
+              class="tech-icon"
+            >
+            </v-icon>
+            <v-tooltip activator="parent" location="bottom">
+              {{ item.name }}</v-tooltip
+            >
           </div>
         </div>
       </div>
     </div>
   </div>
 </template>
-
 <script>
 export default {
   data() {
@@ -81,7 +96,7 @@ export default {
       title: "",
       subtitle: "",
       introParagraph: "",
-
+      isDesktop: window.innerWidth >= 960,
       techStackPngs: [],
       techStackIcons: [],
       devTools: [],
@@ -101,11 +116,31 @@ export default {
     } catch (error) {
       console.error("An error occurred:", error);
     }
+    window.addEventListener("resize", this.handleResize);
+  },
+  unmounted() {
+    window.removeEventListener("resize", this.handleResize);
+  },
+  methods: {
+    handleResize() {
+      this.isDesktop = window.innerWidth > 960;
+    },
   },
 };
 </script>
 
 <style scoped>
+@media screen and (max-width: 960px) {
+  .tech-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .tech-container.row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .stack.column {
   display: flex;
   align-items: center;
@@ -118,7 +153,7 @@ export default {
 }
 
 .hero-container {
-  padding: 2.5rem;
+  padding: 1.5rem;
 }
 .hero-card {
   display: flex;
@@ -133,16 +168,25 @@ export default {
 .resume-paragraph {
   width: 100% !important;
 }
+
 .row {
   display: flex;
   justify-content: center;
   gap: 1rem;
 }
+.tech-row {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  align-items: start;
+}
 
 .tech-icon {
   transition: transform 0.3s ease;
 }
-
+.stack p {
+  font-weight: bold;
+}
 .tech-icon:hover {
   transform: scale(1.2);
 }
@@ -173,6 +217,7 @@ export default {
   width: 100%;
   align-items: center;
   gap: 0.25rem;
+  flex-wrap: wrap;
   /* flex-grow: 1; */
 }
 .tech-icon {

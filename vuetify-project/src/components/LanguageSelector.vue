@@ -1,13 +1,24 @@
 <template>
-  <v-list>
-    <v-list-item
-      v-for="(item, i) in languages"
-      :key="i"
-      @click="changeLanguage(item.code)"
-    >
-      <v-list-item-title>{{ item.name }}</v-list-item-title>
+  <v-menu>
+    <template v-slot:activator="{ props }">
+      <v-btn icon="mdi-earth" v-bind="props"></v-btn>
+    </template>
+
+    <v-list>
+      <v-list-item
+        v-for="(item, i) in languages"
+        :key="i"
+        @click="changeLanguage(item.code)"
+      >
+        <v-list-item-title>{{ item.name }}</v-list-item-title>
+      </v-list-item>
+    </v-list>
+  </v-menu>
+  <!-- <v-list>
+    <v-list-item v-for="(item, i) in items" :key="i">
+      <v-list-item-title>{{ item.title }}</v-list-item-title>
     </v-list-item>
-  </v-list>
+  </v-list> -->
 </template>
 
 <script>

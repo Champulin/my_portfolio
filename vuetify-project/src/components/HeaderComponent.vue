@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar v-if="isDesktop" class="desktop hidden-sm-and-down">
+  <v-app-bar v-if="isDesktop" fixed class="desktop hidden-sm-and-down">
     <router-link to="/">
       <v-img alt="VicenteLogo" src="@/assets/navbarlogo.png" min-width="350" />
     </router-link>
@@ -7,8 +7,9 @@
     <navigation-component :nav-buttons="navButtons" />
     <v-spacer></v-spacer>
     <!-- <dark-mode /> -->
+    <language-selector />
   </v-app-bar>
-  <v-app-bar v-else class="mobile hidden-md-and-up">
+  <v-app-bar v-else fixed class="mobile hidden-md-and-up">
     <v-app-bar-nav-icon @click="toggleDrawer"></v-app-bar-nav-icon>
     <v-toolbar-title>
       <router-link to="">
@@ -22,7 +23,6 @@
       </router-link>
     </v-toolbar-title>
   </v-app-bar>
-  <!-- <language-selector /> -->
   <v-navigation-drawer v-model="drawer" app class="hidden-md-and-up">
     <v-list dense>
       <v-list-item v-for="(button, index) in navButtons" :key="index">
@@ -37,17 +37,17 @@
 <script lang="js">
 // import DarkMode from '@/components/DarkMode.vue'
 import NavigationComponent from '@/components/NavigationComponent.vue'
-// import LanguageSelector from '@/components/LanguageSelector.vue'
+import LanguageSelector from '@/components/LanguageSelector.vue'
 
 export default {
     components: {
     NavigationComponent,
     // DarkMode,
-    // LanguageSelector,
+    LanguageSelector,
     },
   data() {
     return {
-      isDesktop: window.innerWidth > 960,
+      isDesktop: window.innerWidth >= 960,
       navButtons: [],
       drawer: false,
     };
@@ -83,7 +83,9 @@ export default {
   flex-direction: column;
   align-items: flex-start;
 }
-
+.v-app-bar {
+  position: sticky;
+}
 .row {
   width: 100%;
 }

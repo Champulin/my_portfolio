@@ -1,8 +1,5 @@
 {
-  "title": "Vicente Zurita",
-  "subtitle": "Backend Developer",
-  "introParagraph": "I'm a newly graduated analyst programmer with an affinity for backend developement and a passion for learning new technologies. \n I focus on problem solving and producing quality scalable code \n currently living in Marseille, France."
-,
+
   "languages":[
     {
       "name": "English",
@@ -11,33 +8,80 @@
 
     },
     {
-      "name": "Español",
-      "code": "es",
-      "ico":"../src/assets/spain_flag.png"
-    },
-    {
       "name": "Français",
       "code": "fr",
       "ico":"../src/assets/france_flag.png"
     }
 
   ],
+    "projects":[
+      {
+        "name":"pgm-art",
+        "description":"A web application for a local artist done in Django and deployed with Digital Ocean, bootstrap 4 used for styling.\n It features a CRUD and admin interface for the user to manage her projects and different information.",
+        "href":"https://pgm-artproduction.com",
+        "features":"CRUD, admin interface, support for vimeo and youtube video insertion, responsive design",
+        "image":"../src/assets/pgm-art.png",
+        "techStack":[
+          {
+            "name":"Django",
+            "icon":"django"
+          },
+          {
+            "name":"Digital Ocean",
+            "icon":"digital-ocean"
+          },
+          {
+            "name":"Bootstrap",
+            "icon":"bootstrap"
+          }
+        ]
 
+      },
+      {
+        "name":"lebonpot",
+        "description":"A web application for a local store, developped in Wordpress",
+        "href":"https://lebonpot.shop",
+        "techStack":[{
+          "name":"Wordpress",
+          "icon":"wordpress"
+        }],
+        "features":"Wordpress, Woocommerce, responsive design, payments with stripe, account creation, email notifications, invoice generation",
+        "image":"../src/assets/lebonpot.png"
+      }
+    ]
+  ,"workExperience":[
+    {
+      "companyName": "Movatec SPA",
+      "position": "Full Stack Developper",
+      "startDate":"01-02-2023",
+      "endDate":"31-05-2023",
+      "description":"During my time in Movatec i performed different functions mostly in the Back End sector of their HaddaCloud service.\n these functions include: \n",
+      "tasks":[
+        "Creation of an automatic email notification system in Django",
+        "Optimization of existing code by utilizing DRY and SOLID principles",
+        "Creation of a new service for the company's clients via Vue.js and NestJs",
+        "Migration of a PentahoETL process to ApacheSpark",
+        "Creation of ETL diagrams for the company's clients"
+      ],
+      "techStack":"Django, Vue.js, Vuetify, DigitalOcean, MySQL, MongoSQL, PostgreSQL, ApacheSpark, BitBucket, Linux, PentahoETL"
+      ,"href":"https://www.haddacloud.com"
+    }
+  ],
   "navButtons": [
     {
-      "sectionName": "Home",
+      "sectionName": "home",
       "href": "/"
     },
     {
-      "sectionName": "About",
+      "sectionName": "about",
       "href": "/about"
     },
     {
-      "sectionName": "Projects",
+      "sectionName": "projects",
       "href": "/projects"
     },
     {
-      "sectionName": "Contact",
+      "sectionName": "contact",
       "href": "/contact"
     }
   ],

@@ -17,3 +17,4 @@ import DefaultBar from "@/components/HeaderComponent.vue";
 import DefaultFooter from "@/components/FooterComponent.vue";
 import DefaultView from "./View.vue";
 </script>
+<style></style>

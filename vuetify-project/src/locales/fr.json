@@ -1,5 +1,13 @@
 {
-"title": "Vicente Zurita",
-  "subtitle": "Backend Developer",
-  "introParagraph": "I'm a newly graduated analyst programmer with an affinity for backend developement and a passion for learning new technologies. \n I focus on problem solving and producing quality scalable code \n currently living in Marseille, France."
+ "message":{
+    "title": "Vicente Zurita",
+    "subtitle": "Développeur Backend",
+    "aboutTitle": "À propos de moi",
+    "introParagraph": "Je suis un analyste programmeur  avec une affinité pour le développement BackEnd.\nJe me concentre sur la résolution de problèmes et la production de code évolutif de qualité,  résidant actuellement à Marseille, France.",
+    "aboutParagraph":"En tant qu’étudiant récemment diplômé, je ne possède pas des années d’expériences confirmées, mais je vais partager ici ce que j’ai pu accomplir jusqu’à présent.\nDans le passé, pendant mes études, j’ai eu l’occasion de réaliser des applications web pour différents clients particuliers, ce qui m’a permis d’acquérir de l’expérience avec le web, notamment en développant avec Django et en déployant avec Digital Ocean.\nPuis, pendant ma période de stage chez Movatec, j’ai pu apprendre à gérer de grandes quantités d’informations et le fonctionnement d’un CRM.\nAvec eux, j’ai pu travailler à nouveau avec Django et d’autres frameworks liés à Python tels que Oracle Spark ainsi que MongoDB.\nCe portfolio est un nouveau défi pour moi car je le réalise dans un langage qui m’était inconnu auparavant, à savoir Vue.\nJe souhaite continuer sur ma voie du développement web et apprendre de nouvelles technologies pour m’améliorer en tant que développeur.",
+    "home": "Accueil",
+    "about": "À propos",
+    "projects":"Projets",
+    "contact":"Contact"
+    } 
 }

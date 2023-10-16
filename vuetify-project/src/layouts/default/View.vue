@@ -1,8 +1,13 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-  <router-view />
+  <div class="paddy">
+    <router-view />
+  </div>
 </template>
 
-<script lang="js" setup>
-//
-</script>
+<script lang="js" setup></script>
+<style scoped>
+.paddy {
+  padding: 1rem;
+}
+</style>

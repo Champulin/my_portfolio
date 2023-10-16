@@ -1,5 +1,5 @@
 <template>
-  <v-footer class="d-flex flex-column">
+  <footer class="= d-grid d-column">
     <div class="first-footer d-flex align-center w-100 rem-1.5">
       <strong> Connect with me on social networks!</strong>
       <v-btn
@@ -16,7 +16,7 @@
       {{ new Date().getFullYear() }} —
       <strong>Created with Vue/Vuetify 3</strong>
     </div>
-  </v-footer>
+  </footer>
 </template>
 
 <script lang="js">
