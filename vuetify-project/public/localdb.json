@@ -3,14 +3,14 @@
   "languages":[
     {
       "name": "English",
-      "code": "en",
-      "ico":"@/src/assets/uk_flag.png"
+      "code": "en"
+
 
     },
     {
       "name": "Français",
-      "code": "fr",
-      "ico":"@/src/assets/france_flag.png"
+      "code": "fr"
+
     }
 
   ],
@@ -77,6 +77,7 @@
       "icon": "mdi-github"}
   ],"heroPicture": "@/src/assets/hero.png",
  
+
       "techStackIcons": [
         { "icon": "language-python", "name": "Python" },
         { "icon": "language-html5", "name": "HTML5" },
