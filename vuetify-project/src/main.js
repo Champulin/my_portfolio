@@ -13,7 +13,7 @@ import "../src/styles/main.scss";
 // Composables
 import { createApp } from "vue";
 // Plugins
-import { registerPlugins } from "@/plugins";
+import { registerPlugins } from "../src/plugins";
 
 const app = createApp(App);
 

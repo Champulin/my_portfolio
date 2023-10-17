@@ -4,34 +4,34 @@ import { createRouter, createWebHistory } from "vue-router";
 const routes = [
   {
     path: "/",
-    component: () => import("@/layouts/default/Default.vue"),
+    component: () => import("../layouts/default/Default.vue"),
     children: [
       {
         path: "",
         name: "Home",
         component: () =>
-          import(/* webpackChunkName: "home" */ "@/views/Home.vue"),
+          import(/* webpackChunkName: "home" */ "../views/Home.vue"),
       },
       {
         path: "projects",
         name: "Projects",
         component: () =>
           import(
-            /* webpackChunkName: "projects" */ "@/components/ProjectsComponent.vue"
+            /* webpackChunkName: "projects" */ "../components/ProjectsComponent.vue"
           ),
       },
       {
         path: "about",
         name: "About",
         component: () =>
-          import(/* webpackChunkName: "about" */ "@/components/AboutMe.vue"),
+          import(/* webpackChunkName: "about" */ "../components/AboutMe.vue"),
       },
       {
         path: "workExperience",
         name: "Work Experience",
         component: () =>
           import(
-            /* webpackChunkName: "contact" */ "@/components/WorkExperienceComponent"
+            /* webpackChunkName: "contact" */ "../components/WorkExperienceComponent"
           ),
       },
     ],

@@ -4,7 +4,7 @@
       <router-link to="/">
         <v-img
           alt="VicenteLogo"
-          src="@/assets/navbarlogo.png"
+          src="../assets/navbarlogo.png"
           min-width="350"
         />
       </router-link>
@@ -22,7 +22,7 @@
             max-height="65"
             max-width="175"
             containalt="VicenteLogo"
-            src="@/assets/navbarlogo.png"
+            src="../assets/navbarlogo.png"
             contain
           />
         </router-link>
@@ -47,8 +47,8 @@
 
 <script lang="js">
 // import DarkMode from '@/components/DarkMode.vue'
-import NavigationComponent from '@/components/NavigationComponent.vue'
-import LanguageSelector from '@/components/LanguageSelector.vue'
+import NavigationComponent from '../components/NavigationComponent.vue'
+import LanguageSelector from '../components/LanguageSelector.vue'
 
 export default {
     components: {
