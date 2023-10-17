@@ -1,5 +1,5 @@
 <template>
-  <div id="projects" class="projects-container container">
+  <div id="projects" class="projects-container container" v-if="projects">
     <div class="title">
       <h1>Projects</h1>
     </div>
@@ -19,16 +19,16 @@
       <v-card-subtitle>{{ project.techStack }}</v-card-subtitle>
       <v-card-actions>
         <v-btn color="orange-lighten-2" variant="text">
-          {{ $t("message.aboutTitle") }}
+          {{ $t("message.knowMore") }}
         </v-btn>
-        <v-spacer> </v-spacer>
+        <v-spacer></v-spacer>
         <v-btn
-          :icon="show ? 'mdi-chevron-up' : 'mdi-chevron-down'"
-          @click="show = !show"
+          :icon="show[index] ? 'mdi-chevron-up' : 'mdi-chevron-down'"
+          @click="toggleCard(index)"
         ></v-btn>
       </v-card-actions>
       <v-expand-transition>
-        <div v-show="show">
+        <div v-show="show[index]">
           <v-divider></v-divider>
           <v-card-text>
             {{ project.description }}
@@ -42,24 +42,29 @@
     </v-card>
   </div>
 </template>
+
 <script lang="js">
 export default {
   data() {
     return {
-      projects: [],
-      show: false,
+      show: [], // Initialize show as an empty array
+      projects: [], // Initialize projects as an empty array
     };
   },
   methods: {
     openInNewTab(href) {
       window.open(href, "_blank");
-    }
+    },
+    toggleCard(index) {
+      this.show[index] = !this.show[index];
+    },
   },
   async mounted() {
     try {
       const response = await fetch("/localdb.json");
       const data = await response.json();
       this.projects = data.projects;
+        this.show = new Array(this.projects.length).fill(false);
     } catch (error) {
       console.error("An error occurred:", error);
     }

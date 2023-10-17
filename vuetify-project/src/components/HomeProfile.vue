@@ -8,7 +8,7 @@
       <div class="row">
         <div class="column">
           <div class="photo-container">
-            <img :src="heroPicture" alt="Hero" class="hero-photo" />
+            <v-img :src="heroPicture" alt="Hero" class="hero-photo" />
           </div>
           <div class="column">
             <h1>{{ $t("message.title") }}</h1>
