@@ -28,7 +28,12 @@
         </router-link>
       </v-toolbar-title>
     </v-app-bar>
-    <v-navigation-drawer v-model="drawer" app class="hidden-md-and-up">
+    <v-navigation-drawer
+      v-model="drawer"
+      app
+      class="hidden-md-and-up"
+      style="height: 100%; overflow-y: auto"
+    >
       <v-list dense>
         <v-list-item>
           <router-link :to="'/'" class="button-style">
@@ -109,6 +114,12 @@ export default {
   background-color: white; /* Set the desired background color for the navbar */
   /* Add any other styles you want for the sticky navbar */
 }
+.v-navigation-drawer {
+  position: fixed !important;
+  height: auto !important;
+  width: auto !important;
+}
+
 .v-app-bar.mobile.hidden-md-and-up {
   position: fixed !important;
   top: 0;
