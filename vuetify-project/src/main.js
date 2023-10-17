@@ -8,12 +8,12 @@
 import App from "./App.vue";
 
 //Styles
-import "../src/styles/main.scss";
+import "@/styles/main.scss";
 
 // Composables
 import { createApp } from "vue";
 // Plugins
-import { registerPlugins } from "../src/plugins";
+import { registerPlugins } from "@/plugins";
 
 const app = createApp(App);
 
