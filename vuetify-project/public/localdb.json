@@ -20,7 +20,7 @@
         "description":"Portfolio web app for a local art producer.\n This site was designed with the purpose of having a modular portfolio in which the user would be able to add new projects.\n Each project also supports vimeo and youtube video insertion, also a photo album with a variable quantity of photos for each project.",
         "href":"https://pgm-artproduction.com",
         "features":"CRUD, admin interface, support for vimeo and youtube video insertion, responsive design",
-        "image":"/assets/pgm_art.png",
+        "image":"@/assets/pgm_art.png",
         "techStack":"Django, Digital Ocean, Linux, Nginx, JS, HTML, CSS, Bootstrap5, PostgreSQL"
 
       },
@@ -30,7 +30,7 @@
         "href":"https://lebonpot.shop",
         "techStack":"Wordpress, WooCommerce, Stripe, CSS, JS",
         "features":"payments with stripe, account creation, email notifications, invoice generation,responsive design, ",
-        "image":"/assets/lebonpot.png"
+        "image":"@/assets/lebonpot.png"
       }
     ]
   ,"workExperience":[
@@ -75,7 +75,7 @@
       "name": "GitHub",
       "href": "https://github.com/Champulin/",
       "icon": "mdi-github"}
-  ],"heroPicture": "/assets/hero.png",
+  ],"heroPicture": "@/assets/hero.png",
  
       "techStackIcons": [
         { "icon": "language-python", "name": "Python" },
