@@ -8,7 +8,7 @@
 import App from "./App.vue";
 
 //Styles
-import "@/styles/main.scss";
+import "../src/styles/main.scss";
 
 // Composables
 import { createApp } from "vue";
