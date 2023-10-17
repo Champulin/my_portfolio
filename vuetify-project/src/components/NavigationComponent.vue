@@ -1,20 +1,27 @@
 <template>
   <v-tabs>
+    <v-tab>
+      <router-link :to="'/'" class="button-style">
+        {{ $t("message.home") }}
+      </router-link>
+    </v-tab>
     <v-tab id="menuBtns" v-for="(button, index) in navButtons" :key="index">
-      <a @click="scrollTo(button.sectionName)" class="button-style">
+      <router-link :to="'/#' + button.href" class="button-style">
         {{ $t("message." + button.sectionName) }}
-      </a>
+      </router-link>
     </v-tab>
   </v-tabs>
 </template>
+
 <script lang="js">
 export default {
     props: ['navButtons'],
   methods: {
-      scrollTo(sectionName) {
-      this.$refs[sectionName].scrollIntoView({ behavior: 'smooth' });
-    },
-}}
+  scrollTo(sectionName) {
+    document.getElementById(sectionName).scrollIntoView({ behavior: 'smooth' });
+}
+  }
+}
 </script>
 <style scoped>
 .v-tabs {

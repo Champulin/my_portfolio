@@ -51,18 +51,6 @@
               {{ item.name }}</v-tooltip
             >
           </div>
-
-          <!-- <v-img
-            v-for="(item, index) in techStackPngs"
-            :key="index"
-            :src="item.icon"
-            alt="Tech Icon"
-            class="tech-icon"
-          >
-            <v-tooltip activator="parent" location="bottom">
-              {{ item.name }}</v-tooltip
-            >
-          </v-img> -->
         </div>
       </div>
     </div>
@@ -134,6 +122,10 @@ export default {
   .tech-container {
     display: flex;
     flex-wrap: wrap;
+    padding-bottom: 3rem;
+  }
+  .row {
+    padding-bottom: 1.5rem;
   }
   .tech-container.row {
     display: flex;
@@ -178,7 +170,6 @@ export default {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  align-items: start;
 }
 
 .tech-icon {

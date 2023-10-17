@@ -16,19 +16,23 @@ const routes = [
         path: "projects",
         name: "Projects",
         component: () =>
-          import(/* webpackChunkName: "projects" */ "@/views/ProjectsView.vue"),
+          import(
+            /* webpackChunkName: "projects" */ "@/components/ProjectsComponent.vue"
+          ),
       },
       {
         path: "about",
         name: "About",
         component: () =>
-          import(/* webpackChunkName: "about" */ "@/views/AboutView.vue"),
+          import(/* webpackChunkName: "about" */ "@/components/AboutMe.vue"),
       },
       {
-        path: "contact",
-        name: "Contact",
+        path: "work-experience",
+        name: "Work Experience",
         component: () =>
-          import(/* webpackChunkName: "contact" */ "@/views/ContactView"),
+          import(
+            /* webpackChunkName: "contact" */ "@/components/WorkExperienceComponent"
+          ),
       },
     ],
   },
@@ -37,6 +41,15 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
+  scrollBehavior(to) {
+    if (to.hash) {
+      return window.scrollTo({
+        top: document.querySelector(to.hash).offsetTop,
+        behavior: "smooth",
+      });
+    }
+    return window.scrollTo({ top: 0, behavior: "smooth" });
+  },
 });
 
 export default router;

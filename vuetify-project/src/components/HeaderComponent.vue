@@ -1,37 +1,48 @@
 <template>
-  <v-app-bar v-if="isDesktop" fixed class="desktop hidden-sm-and-down">
-    <router-link to="/">
-      <v-img alt="VicenteLogo" src="@/assets/navbarlogo.png" min-width="350" />
-    </router-link>
-    <v-spacer></v-spacer>
-    <navigation-component :nav-buttons="navButtons" />
-    <v-spacer></v-spacer>
-    <!-- <dark-mode /> -->
-    <language-selector />
-  </v-app-bar>
-  <v-app-bar v-else fixed class="mobile hidden-md-and-up">
-    <v-app-bar-nav-icon @click="toggleDrawer"></v-app-bar-nav-icon>
-    <v-toolbar-title>
-      <router-link to="">
+  <div class="navbar">
+    <v-app-bar v-if="isDesktop" class="desktop hidden-sm-and-down">
+      <router-link to="/">
         <v-img
-          max-height="65"
-          max-width="175"
-          containalt="VicenteLogo"
+          alt="VicenteLogo"
           src="@/assets/navbarlogo.png"
-          contain
+          min-width="350"
         />
       </router-link>
-    </v-toolbar-title>
-  </v-app-bar>
-  <v-navigation-drawer v-model="drawer" app class="hidden-md-and-up">
-    <v-list dense>
-      <v-list-item v-for="(button, index) in navButtons" :key="index">
-        <router-link :to="button.href" class="button-style">
-          {{ button.sectionName }}
+      <v-spacer></v-spacer>
+      <navigation-component :nav-buttons="navButtons" />
+      <v-spacer></v-spacer>
+      <!-- <dark-mode /> -->
+      <language-selector />
+    </v-app-bar>
+    <v-app-bar v-else class="mobile hidden-md-and-up">
+      <v-app-bar-nav-icon @click="toggleDrawer"></v-app-bar-nav-icon>
+      <v-toolbar-title>
+        <router-link to="">
+          <v-img
+            max-height="65"
+            max-width="175"
+            containalt="VicenteLogo"
+            src="@/assets/navbarlogo.png"
+            contain
+          />
         </router-link>
-      </v-list-item>
-    </v-list>
-  </v-navigation-drawer>
+      </v-toolbar-title>
+    </v-app-bar>
+    <v-navigation-drawer v-model="drawer" app class="hidden-md-and-up">
+      <v-list dense>
+        <v-list-item>
+          <router-link :to="'/'" class="button-style">
+            {{ $t("message.home") }}
+          </router-link>
+        </v-list-item>
+        <v-list-item v-for="(button, index) in navButtons" :key="index">
+          <router-link :to="'/#' + (button.href || '')" class="button-style">
+            {{ $t("message." + button.sectionName) }}
+          </router-link>
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
+  </div>
 </template>
 
 <script lang="js">
@@ -72,8 +83,14 @@ export default {
     },
     handleResize() {
       this.isDesktop = window.innerWidth > 960;
-    }
+    },
+  scrollTo(sectionName) {
+    this.$nextTick(() => {
+      document.getElementById(sectionName).scrollIntoView({ behavior: 'smooth' });
+    });
   },
+}
+
 };
 </script>
 
@@ -83,8 +100,23 @@ export default {
   flex-direction: column;
   align-items: flex-start;
 }
-.v-app-bar {
-  position: sticky;
+.v-app-bar.desktop.hidden-sm-and-down {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* You can adjust the z-index as needed */
+  background-color: white; /* Set the desired background color for the navbar */
+  /* Add any other styles you want for the sticky navbar */
+}
+.v-app-bar.mobile.hidden-md-and-up {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* You can adjust the z-index as needed */
+  background-color: white; /* Set the desired background color for the mobile navbar */
+  /* Add any other styles you want for the sticky mobile navbar */
 }
 .row {
   width: 100%;
