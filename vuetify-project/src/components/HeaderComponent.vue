@@ -116,7 +116,7 @@ export default {
 }
 .v-navigation-drawer {
   position: fixed !important;
-  height: auto !important;
+  height: max-content !important;
   width: auto !important;
 }
 
