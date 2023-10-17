@@ -75,13 +75,8 @@
       "name": "GitHub",
       "href": "https://github.com/Champulin/",
       "icon": "mdi-github"}
-  ],"heroPicture": "../src/assets/hero.png",
+  ],"heroPicture": "@/src/assets/hero.png",
  
-  "techStackPngs": [
-    { "icon": "../src/assets/mongo_logo.png", "name": "MongoDB" },
-    { "icon": "../src/assets/django_logo.png", "name": "Django" },
-    { "icon": "../src/assets/vite_logo.png", "name": "Vite" }
-  ],
       "techStackIcons": [
         { "icon": "language-python", "name": "Python" },
         { "icon": "language-html5", "name": "HTML5" },
