@@ -2,11 +2,7 @@
   <div class="navbar">
     <v-app-bar v-if="isDesktop" class="desktop hidden-sm-and-down">
       <router-link to="/">
-        <v-img
-          alt="VicenteLogo"
-          src="@/assets/navbarlogo.png"
-          min-width="350"
-        />
+        <v-img alt="VicenteLogo" :src="navBarLogo" min-width="350" />
       </router-link>
       <v-spacer></v-spacer>
       <navigation-component :nav-buttons="navButtons" />
@@ -22,7 +18,7 @@
             max-height="65"
             max-width="175"
             containalt="VicenteLogo"
-            src="@/assets/navbarlogo.png"
+            :src="navBarLogo"
             contain
           />
         </router-link>
@@ -66,6 +62,7 @@ export default {
       isDesktop: window.innerWidth >= 960,
       navButtons: [],
       drawer: false,
+      navBarLogo: "",
     };
   },
   async mounted() {
@@ -73,6 +70,7 @@ export default {
       const response = await fetch('/localdb.json');
       const data = await response.json();
       this.navButtons = data.navButtons;
+      this.navBarLogo = data.navLogo;
       console.log(this.navButtons);
     } catch (error) {
       console.error('An error occurred:', error);

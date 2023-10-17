@@ -47,7 +47,7 @@
 export default {
   data() {
     return {
-      show: new Array(0), // Initialize show as an empty array
+      show: [], // Initialize show as an empty array
       projects: [], // Initialize projects as an empty array
     };
   },
@@ -56,7 +56,7 @@ export default {
       window.open(href, "_blank");
     },
     toggleCard(index) {
-      this.$set(this.show, index, !this.show[index]);
+      this.show[index] = !this.show[index];
     },
   },
   async mounted() {
@@ -64,6 +64,7 @@ export default {
       const response = await fetch("/localdb.json");
       const data = await response.json();
       this.projects = data.projects;
+        this.show = new Array(this.projects.length).fill(false);
     } catch (error) {
       console.error("An error occurred:", error);
     }

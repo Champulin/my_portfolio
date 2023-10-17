@@ -34,7 +34,7 @@ export default defineConfig({
   define: { "process.env": {} },
   resolve: {
     alias: {
-      "/@static/": "/public/static/", // Alias for static assets, adjust the path as needed
+      // "/@static/": "/public/static/", // Alias for static assets, adjust the path as needed
       "@": fileURLToPath(new URL("./src", import.meta.url)), // Alias for your project source files
     },
     extensions: [".js", ".json", ".jsx", ".mjs", ".ts", ".tsx", ".vue"],
