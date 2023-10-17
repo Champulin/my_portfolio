@@ -3,12 +3,13 @@
     "title": "Vicente Zurita",
     "subtitle": "Backend Developer",
     "aboutTitle":"Get to know a little about me",
-    "introParagraph": "I'm a developper graduated from programmer analyst with an affinity for backend developement.\n I focus on problem solving and producing quality scalable code currently living in Marseille, France.",
-    "aboutParagraph": "During my time studying, I had the chance to do web applications for different particular clients which helped me gain experience with the web, notably developing with Django and Deploying with Digital Ocean.\n\nThen during my internship period with Movatec, I was able to learn how to handle big chunks of information and the functioning of a CRM.\nWith them, I was able to work again with Django and other Python-related frameworks such as Oracle Spark as well as MongoDB.\nThis very portfolio is a new challenge to me since I'm doing it in a language unknown to me before which is Vue.\nI wish to continue on my path of web development and learning new technologies to improve as a developer.",
+    "introParagraph": "I'm a developper from Santiago, Chile graduated from programmer analyst with an affinity for backend developement.\n I focus on problem solving and producing quality scalable code currently living in Marseille, France.",
+    "aboutParagraph": "I love  Chess, Videogames, Anime and traveling and i'm a geek for building computers",
     "home": "Home",
     "about": "About",
     "projects": "Projects",
-    "work-experience": "Work Experience",
-    "connect": "Connect with me on social networks!"
+    "workExperience": "Work Experience",
+    "connect": "Connect with me on social networks!",
+    "knowMore":"Details"
   }
 }

@@ -19,7 +19,7 @@
       <v-card-subtitle>{{ project.techStack }}</v-card-subtitle>
       <v-card-actions>
         <v-btn color="orange-lighten-2" variant="text">
-          {{ $t("message.aboutTitle") }}
+          {{ $t("message.knowMore") }}
         </v-btn>
         <v-spacer> </v-spacer>
         <v-btn
