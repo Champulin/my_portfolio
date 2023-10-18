@@ -1,11 +1,11 @@
 <template>
-  <div id="about" class="about-container container">
+  <div class="about-container container">
     <div class="title">
-      <h2>{{ $t("message.aboutTitle") }}</h2>
+      <h2>{{ $t("aboutMe.aboutTitle") }}</h2>
     </div>
     <div class="row resume-paragraph">
-      <p v-html="$t('message.introParagraph').split('\n').join('<br>')"></p>
-      <p v-html="$t('message.aboutParagraph').split('\n').join('<br>')"></p>
+      <p v-html="$t('aboutMe.introParagraph').split('\n').join('<br>')"></p>
+      <p v-html="$t('aboutMe.aboutParagraph').split('\n').join('<br>')"></p>
     </div>
   </div>
 </template>

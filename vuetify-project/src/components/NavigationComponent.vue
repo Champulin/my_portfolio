@@ -2,12 +2,12 @@
   <v-tabs>
     <v-tab>
       <router-link :to="'/'" class="button-style">
-        {{ $t("message.home") }}
+        {{ $t("navBar.home") }}
       </router-link>
     </v-tab>
     <v-tab id="menuBtns" v-for="(button, index) in navButtons" :key="index">
       <router-link :to="'/#' + button.href" class="button-style">
-        {{ $t("message." + button.sectionName) }}
+        {{ $t("navBar." + button.sectionName) }}
       </router-link>
     </v-tab>
   </v-tabs>

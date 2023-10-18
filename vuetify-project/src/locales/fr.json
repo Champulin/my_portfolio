@@ -1,14 +1,55 @@
 {
- "message":{
-    "title": "Vicente Zurita",
-    "subtitle": "Développeur Backend",
-    "aboutTitle": "À propos de moi",
-    "introParagraph": "Je suis un développeur de Santiago, au Chili, diplômé en tant qu'analyste programmeur avec une affinité pour le développement backend. Je me concentre sur la résolution de problèmes et la production de code évolutif de qualité. Actuellement, je vis à Marseille, en France.",
-    "aboutParagraph": "J'adore les échecs, les jeux vidéo, les anime et les voyages. Je suis un geek pour la construction d'ordinateurs.",
+  "navBar": {
     "home": "Accueil",
     "about": "À propos",
-    "projects":"Projets",
-    "workExperience":"Experiences",
-    "knowMore":"En savoir plus"
-    } 
+    "projects": "Projets Freelance",
+    "workExperience": "Expérience professionnelle"
+  },
+  "homeProfile": {
+    "title": "Vicente Zurita",
+    "subtitle": "Développeur Backend"
+  },
+  "aboutMe": {
+    "aboutTitle": "Faites connaissance avec moi",
+    "introParagraph": "Je suis un développeur originaire de Santiago, au Chili, diplômé en tant qu'analyste programmeur avec une affinité pour le développement backend. Je me concentre sur la résolution de problèmes et la production de code de qualité et évolutif. Actuellement résident à Marseille, en France.",
+    "aboutParagraph": "J'adore les échecs, les jeux vidéo, les animes et les voyages, et je suis passionné par la montage d'ordinateurs."
+   },
+  "componentMessages": {
+    "knowMore": "Détails"
+  },
+  "freelanceProjects": {
+    "pgm-artproduction": {
+      "clientName": "pgm-artproduction",
+      "description": "Portfolio pour un producteur d'art local. Ce site a été conçu dans le but de disposer d'un portfolio modulaire permettant à l'utilisateur d'ajouter de nouveaux projets. Chaque projet prend également en charge l'insertion de vidéos Vimeo et YouTube, ainsi qu'un album photo avec une quantité variable de photos pour chaque projet.",
+      "href": "https://pgm-artproduction.com",
+      "features": "CRUD, interface d'administration, prise en charge de l'insertion de vidéos Vimeo et YouTube, design réactif",
+      "image": "../static/pgm_art.png",
+      "techStack": "Django, Digital Ocean, Linux, Nginx, JS, HTML, CSS, Bootstrap5, PostgreSQL"
+    },
+    "lebonpot": {
+      "name": "lebonpot",
+      "description": "Boutique en ligne, développée sous WordPress",
+      "href": "https://lebonpot.shop",
+      "techStack": "WordPress, WooCommerce, Stripe, CSS, JS",
+      "features": "Paiements avec Stripe, création de compte, notifications par e-mail, génération de factures, design réactif",
+      "image": "../static/lebonpot.png"
+    }
+  },
+  "workExperience": {
+  "movatec": {
+    "position": "Développeur Full Stack",
+    "duration": "01/02/2023 - 01/06/2023",
+    "description": "Pendant mon séjour chez Movatec, j'ai effectué différentes fonctions principalement dans le secteur de la Backend de leur service HaddaCloud.",
+    "tasks": {
+      "task1": "Création d'un système de notification automatique par e-mail en Django.",
+      "task2": "Optimisation du code existant en utilisant les principes DRY et SOLID.",
+      "task3": "Création d'un nouveau service pour les clients de l'entreprise via Vue.js et NestJs.",
+      "task4": "Migration d'un processus Pentaho ETL vers Apache Spark.",
+      "task5": "Création de diagrammes ETL pour les clients de l'entreprise."
+    }
+  }
+},
+  "popUp": {
+    "popMsg": "Ce site web est actuellement en construction. N'hésitez pas à naviguer et à me contacter si vous l'appréciez."
+  }
 }

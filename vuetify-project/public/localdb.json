@@ -1,56 +1,55 @@
 {
-
   "languages":[
     {
       "name": "English",
       "code": "en"
-
-
     },
     {
       "name": "Français",
       "code": "fr"
-
     }
-
   ],
     "projects":[
       {
-        "name":"pgm-artproduction",
-        "description":"Portfolio web app for a local art producer.\n This site was designed with the purpose of having a modular portfolio in which the user would be able to add new projects.\n Each project also supports vimeo and youtube video insertion, also a photo album with a variable quantity of photos for each project.",
-        "href":"https://pgm-artproduction.com",
-        "features":"CRUD, admin interface, support for vimeo and youtube video insertion, responsive design",
+        "clientName":"PGM-Artproduction",
+        "translationKey": "freelanceProjects.pgm-artproduction",
+        "description":"description",
+        "features":"features",
+        "techStack":"Django, Digital Ocean, Linux, Nginx, JS, HTML, CSS, Bootstrap5, PostgreSQL",
         "image": "../static/pgm_art.png",
-        "techStack":"Django, Digital Ocean, Linux, Nginx, JS, HTML, CSS, Bootstrap5, PostgreSQL"
+        "href":"https://pgm-artproduction.com"
 
       },
       {
-        "name":"lebonpot",
-        "description":"Online Shop, developped in Wordpress",
-        "href":"https://lebonpot.shop",
+        "clientName":"Le Bon Pot",
+        "translationKey": "freelanceProjects.lebonpot",
+        "description":"description",
+        "features":"features",
         "techStack":"Wordpress, WooCommerce, Stripe, CSS, JS",
-        "features":"payments with stripe, account creation, email notifications, invoice generation,responsive design, ",
-        "image":"../static/lebonpot.png"
+        "image":"../static/lebonpot.png",
+        "href":"https://lebonpot.shop"
       }
     ]
-  ,"workExperience":[
-    {
-      "companyName": "Movatec SPA",
-      "position": "Full Stack Developper",
-      "startDate":"01-02-2023",
-      "endDate":"31-05-2023",
-      "description":"During my time in Movatec i performed different functions mostly in the Back End sector of their HaddaCloud service.\n these functions include: \n",
-      "tasks":[
-        "Creation of an automatic email notification system in Django",
-        "Optimization of existing code by utilizing DRY and SOLID principles",
-        "Creation of a new service for the company's clients via Vue.js and NestJs",
-        "Migration of a PentahoETL process to ApacheSpark",
-        "Creation of ETL diagrams for the company's clients"
-      ],
-      "techStack":"Django, Vue.js, Vuetify, DigitalOcean, MySQL, MongoSQL, PostgreSQL, ApacheSpark, BitBucket, Linux, PentahoETL"
-      ,"href":"https://www.haddacloud.com"
-    }
-  ],
+  ,"workExperience": [
+  {
+    "companyName": "Movatec",
+    "translationKey":"workExperience.movatec",
+    "position": "Full Stack Developer",
+    "duration": "01/02/2023-01/06/2023",
+    "description": "description",
+    "tasks": [
+      "task1",
+      "task2",
+      "task3",
+      "task4",
+      "task5"
+    ],
+    "techStack": "Django, Vue.js, Vuetify, DigitalOcean, MySQL, MongoSQL, PostgreSQL, ApacheSpark, BitBucket, Linux, PentahoETL",
+    "href": "https://www.haddacloud.com",
+    "companyLogo": "../static/hadda_cloud.png"
+  }
+]
+,
   "navButtons": [
     {
       "sectionName": "about",
@@ -75,8 +74,8 @@
       "name": "GitHub",
       "href": "https://github.com/Champulin/",
       "icon": "mdi-github"}
-  ]
-  ,"heroPicture": "../static/hero.png",
+  ],
+  "heroPicture": "../static/hero.png",
   "navLogo": "../static/navbarlogo.png",
  
       "techStackIcons": [

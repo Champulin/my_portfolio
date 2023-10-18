@@ -1,9 +1,5 @@
 <template>
-  <div
-    id="home"
-    v-if="isDesktop"
-    class="hero-container desktop hidden-sm-and-down"
-  >
+  <div v-if="isDesktop" class="hero-container desktop hidden-sm-and-down">
     <div class="hero-card">
       <div class="row">
         <div class="column">
@@ -11,8 +7,8 @@
             <v-img :src="heroPicture" alt="Hero" class="hero-photo" />
           </div>
           <div class="column">
-            <h1>{{ $t("message.title") }}</h1>
-            <h2>{{ $t("message.subtitle") }}</h2>
+            <h1>{{ $t("homeProfile.title") }}</h1>
+            <h2>{{ $t("homeProfile.subtitle") }}</h2>
           </div>
         </div>
       </div>
@@ -28,8 +24,8 @@
         </div>
       </div>
       <div class="column">
-        <h1>{{ $t("message.title") }}</h1>
-        <h2>{{ $t("message.subtitle") }}</h2>
+        <h1>{{ $t("homeProfile.title") }}</h1>
+        <h2>{{ $t("homeProfile.subtitle") }}</h2>
       </div>
     </div>
   </div>
@@ -39,7 +35,7 @@
         <p>Tech Stack |</p>
       </div>
       <div class="column">
-        <div class="tech-stack">
+        <div id="about" class="tech-stack">
           <div v-for="(item, index) in techStackIcons" :key="index">
             <v-icon
               :icon="'mdi-' + item.icon"
@@ -191,6 +187,7 @@ export default {
 .hero-photo {
   width: 100%;
   height: auto;
+  max-height: fit-content;
   border-radius: 50%;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease;
