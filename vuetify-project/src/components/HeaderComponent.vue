@@ -23,6 +23,10 @@
           />
         </router-link>
       </v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-btn icon>
+        <language-selector />
+      </v-btn>
     </v-app-bar>
     <v-navigation-drawer
       v-model="drawer"

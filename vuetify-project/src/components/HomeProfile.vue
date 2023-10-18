@@ -230,4 +230,7 @@ export default {
   width: 100%;
   margin-top: 5vh;
 }
+.v-img {
+  object-fit: cover;
+}
 </style>
