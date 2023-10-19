@@ -4,7 +4,7 @@
     class="work-container container"
     v-if="workExperiences"
   >
-    <v-row class="title">
+    <v-row>
       <h1>{{ title }}</h1>
     </v-row>
     <v-row v-for="(item, index) in workExperiences" :key="index">
@@ -50,3 +50,4 @@ export default {
   }
 }
 </script>
+<style></style>

@@ -15,7 +15,9 @@
     "aboutParagraph": "I love chess, video games, anime, and traveling, and I'm a geek for building computers."
   },
   "componentMessages": {
-    "knowMore": "Details"
+    "knowMore": "Details",
+    "connect":"Connect with me on social networks!",
+    "createdWith":"Created with Vue/Vuetify 3"
   },
   "freelanceProjects": {
     "pgm-artproduction": {
@@ -25,6 +27,10 @@
     "lebonpot": {
       "description": "Online shop developed in WordPress.",
       "features": "Payments with Stripe, account creation, email notifications, invoice generation, responsive design."
+    },
+    "duocuc":{
+      "features":"CRM project for the school, developed in a team of 3",
+      "description":"CRUD, data processing, login, report downloading, csv file reading and transformation to dataframe, responsive design, creation of API for the processing and storing of data, notification system."
     }
   },
   "workExperience": {

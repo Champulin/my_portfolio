@@ -15,7 +15,9 @@
     "aboutParagraph": "J'adore les échecs, les jeux vidéo, les animes et les voyages, et je suis passionné par la montage d'ordinateurs."
    },
   "componentMessages": {
-    "knowMore": "Détails"
+    "knowMore": "Détails",
+    "connect": "Connectez-vous avec moi sur les réseaux sociaux !",
+    "createdWith":"Créé avec Vue3 et Vuetify"
   },
   "freelanceProjects": {
     "pgm-artproduction": {
@@ -33,6 +35,10 @@
       "techStack": "WordPress, WooCommerce, Stripe, CSS, JS",
       "features": "Paiements avec Stripe, création de compte, notifications par e-mail, génération de factures, design réactif",
       "image": "../static/lebonpot.png"
+    },
+    "duocuc": {
+      "description": "Projet CRM pour l'école, développé en équipe de 3 personnes",
+      "features": "CRUD, traitement des données, connexion, téléchargement de rapports, lecture de fichiers CSV et transformation en dataframe, design responsive, création d'une API pour le traitement et le stockage des données, système de notification."
     }
   },
   "workExperience": {

@@ -1,7 +1,7 @@
 <template>
   <footer class="= d-grid d-column">
     <div class="first-footer d-flex align-center w-100 rem-1.5">
-      <strong> Connect with me on social networks!</strong>
+      <strong> {{ connectMsg }}</strong>
       <v-btn
         v-for="socials in socialMedia"
         :key="socials"
@@ -26,6 +26,10 @@ export default {
   data() {
     return {
       socialMedia: [],
+      connectMsg: this.$t("componentMessages.connect"),
+      copyrightMsg: this.$t(
+        "componentMessages.createdWith"
+      ),
     }
   },
   async mounted() {

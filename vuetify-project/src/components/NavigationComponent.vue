@@ -28,5 +28,22 @@ export default {
   align-items: center;
   justify-content: center;
   height: 50%;
+  .button-style {
+    display: inline-block;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    background-color: transparent;
+    color: #343a40;
+    border-radius: 50px; /* This will give the buttons a rounded look */
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out; /* Added transform transition */
+    :hover {
+      background-color: #343a40;
+      color: #f8f9fa;
+      transform: scale(
+        1.05
+      ); /* Slightly increase the size of the button on hover */
+    }
+  }
 }
 </style>

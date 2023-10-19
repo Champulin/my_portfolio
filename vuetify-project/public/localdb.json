@@ -28,6 +28,15 @@
         "techStack":"Wordpress, WooCommerce, Stripe, CSS, JS",
         "image":"../static/lebonpot.png",
         "href":"https://lebonpot.shop"
+      },
+      {
+        "clientName":"DuocUC",
+        "translationKey": "freelanceProjects.duocuc",
+        "description":"description",
+        "features":"features",
+        "techStack": "Django, Angular, SASS, TypeScript, MongoDB, Pandas",
+        "image":"../static/school_project.png",
+        "href":"github.com/Champulin/proyecto_duocuc"
       }
     ]
   ,"workExperience": [

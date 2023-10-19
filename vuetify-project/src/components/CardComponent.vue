@@ -16,11 +16,11 @@
       <v-btn color="orange-lighten-2" variant="text" @click="toggleCard(index)">
         {{ expandMsg }}
       </v-btn>
-      <v-spacer></v-spacer>
+      <v-spacer />
       <v-btn
         :icon="show[index] ? 'mdi-chevron-up' : 'mdi-chevron-down'"
         @click="toggleCard(index)"
-      ></v-btn>
+      />
     </v-card-actions>
     <v-expand-transition>
       <div v-show="show[index]">
@@ -76,14 +76,8 @@ export default {
 };
 </script>
 <style scoped>
-.projects {
-  padding-bottom: 2rem;
-}
 .v-card-subtitle {
   white-space: pre-wrap;
-}
-.project-card {
-  margin: auto;
 }
 .v-card-text ul {
   list-style-type: disc;
