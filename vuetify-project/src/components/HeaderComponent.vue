@@ -167,17 +167,7 @@ export default {
   ); /* Partially transparent white background */
   /* Add any other styles you want for the sticky mobile navbar */
 }
-.row {
-  width: 100%;
-}
 
-.stack.column {
-  width: auto;
-}
-.desktop.v-btn {
-  height: auto;
-  height: initial;
-}
 .v-application {
   max-height: 80px;
 }

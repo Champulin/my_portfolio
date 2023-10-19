@@ -37,7 +37,6 @@ export default {
       const response = await fetch('/localdb.json');
       const data = await response.json();
       this.socialMedia = data.socialMedia;
-      console.log(this.navButtons);
     } catch (error) {
       console.error('An error occurred:', error);
     }

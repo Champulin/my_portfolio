@@ -1,9 +1,6 @@
 <template>
-  <v-container
-    id="work-experience"
-    class="work-container container"
-    v-if="workExperiences"
-  >
+  <div id="work-experience" class="navigation-hook"></div>
+  <v-container class="work-container container" v-if="workExperiences">
     <v-row>
       <h1>{{ title }}</h1>
     </v-row>
@@ -50,4 +47,4 @@ export default {
   }
 }
 </script>
-<style></style>
+<style scoped></style>

@@ -1,9 +1,6 @@
 <template>
-  <v-container
-    id="projects"
-    class="projects-container container"
-    v-if="projects"
-  >
+  <div id="projects" class="navigation-hook"></div>
+  <v-container class="projects-container container" v-if="projects">
     <v-row class="title">
       <h1>{{ title }}</h1>
     </v-row>

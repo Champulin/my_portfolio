@@ -1,4 +1,5 @@
 <template>
+  <div id="about" class="navigation-hook"></div>
   <v-container class="about-container">
     <v-row class="title">
       <h1>{{ title }}</h1>

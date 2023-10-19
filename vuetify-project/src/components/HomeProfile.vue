@@ -40,7 +40,7 @@
         <p>Tech Stack |</p>
       </div>
       <div class="column">
-        <div id="about" class="tech-stack">
+        <div class="tech-stack">
           <div v-for="(item, index) in techStackIcons" :key="index">
             <v-icon
               :icon="'mdi-' + item.icon"

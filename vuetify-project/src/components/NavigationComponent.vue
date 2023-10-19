@@ -27,10 +27,11 @@ export default {
 .v-tabs {
   align-items: center;
   justify-content: center;
-  height: 50%;
+  flex-wrap: wrap;
+  max-width: auto;
+  padding: 0;
   .button-style {
     display: inline-block;
-    padding: 10px 20px;
     text-align: center;
     text-decoration: none;
     background-color: transparent;
