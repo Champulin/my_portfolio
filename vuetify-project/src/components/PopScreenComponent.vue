@@ -3,10 +3,7 @@
     <v-card>
       <v-card-title class="headline">Site in Development</v-card-title>
       <v-card-text>
-        <p>
-          This site is currently in development. Some features may not be
-          available yet.
-        </p>
+        <p>{{ popMsg }}</p>
       </v-card-text>
       <v-card-actions>
         <v-btn color="primary" @click="closeDialog">OK</v-btn>
@@ -20,6 +17,7 @@ export default {
   data() {
     return {
       dialog: true,
+      popMsg: this.$t("popUp.popMsg"),
     };
   },
   methods: {
