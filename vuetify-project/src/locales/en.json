@@ -12,11 +12,11 @@
   "aboutMe": {
     "aboutTitle": "Get to know a little about me",
     "introParagraph": "I'm a developer from Santiago, Chile, graduated as a programmer analyst with an affinity for backend development. I focus on problem-solving and producing quality scalable code. I currently live in Marseille, France.",
-    "aboutParagraph": "I love chess, video games, anime, and traveling, and I'm a geek for building computers."
+    "aboutParagraph": "I love chess, video games, anime, and traveling, also I'm a geek for building computers."
   },
   "componentMessages": {
     "knowMore": "Details",
-    "connect":"Connect with me on social networks!",
+    "connect":"Connect with me on social media!",
     "createdWith":"Created with Vue/Vuetify 3"
   },
   "freelanceProjects": {
