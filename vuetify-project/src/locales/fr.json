@@ -25,7 +25,7 @@
       "description": "Portfolio pour un producteur d'art local. Ce site a été conçu dans le but de disposer d'un portfolio modulaire permettant à l'utilisateur d'ajouter de nouveaux projets. Chaque projet prend également en charge l'insertion de vidéos Vimeo et YouTube, ainsi qu'un album photo avec une quantité variable de photos pour chaque projet.",
       "href": "https://pgm-artproduction.com",
       "features": "CRUD, interface d'administration, prise en charge de l'insertion de vidéos Vimeo et YouTube, design réactif",
-      "image": "../static/pgm_art.png",
+      "image": "../static/pgm_art.webp",
       "techStack": "Django, Digital Ocean, Linux, Nginx, JS, HTML, CSS, Bootstrap5, PostgreSQL"
     },
     "lebonpot": {
@@ -34,7 +34,7 @@
       "href": "https://lebonpot.shop",
       "techStack": "WordPress, WooCommerce, Stripe, CSS, JS",
       "features": "Paiements avec Stripe, création de compte, notifications par e-mail, génération de factures, design réactif",
-      "image": "../static/lebonpot.png"
+      "image": "../static/lebonpot.webp"
     },
     "duocuc": {
       "description": "Projet CRM pour l'école, développé en équipe de 3 personnes",

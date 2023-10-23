@@ -1,15 +1,17 @@
 <template>
   <v-tabs>
-    <v-tab>
-      <router-link :to="'/'" class="button-style">
+    <router-link :to="'/'" class="button-style">
+      <v-tab>
         {{ $t("navBar.home") }}
-      </router-link>
-    </v-tab>
-    <v-tab id="menuBtns" v-for="(button, index) in navButtons" :key="index">
+      </v-tab>
+    </router-link>
+    <div id="menuBtns" v-for="(button, index) in navButtons" :key="index">
       <router-link :to="'/#' + button.href" class="button-style">
-        {{ $t("navBar." + button.sectionName) }}
+        <v-tab>
+          {{ $t("navBar." + button.sectionName) }}
+        </v-tab>
       </router-link>
-    </v-tab>
+    </div>
   </v-tabs>
 </template>
 

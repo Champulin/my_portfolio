@@ -183,6 +183,9 @@ export default {
   }
 }
 /* styles for elements inside tech-container */
+h1 {
+  text-decoration: none;
+}
 .tech-container {
   display: flex;
   flex-direction: column;
