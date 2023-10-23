@@ -73,7 +73,7 @@ export default {
         openInNewTab(href) {
           window.open(href, "_blank");
       },
-    },
+  },
 };
 </script>
 <style scoped>
