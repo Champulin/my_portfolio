@@ -127,6 +127,9 @@ export default {
 </script>
 
 <style scoped>
+h1 {
+  text-decoration: none; /* to remove underline generated from main.scss */
+}
 /* responsiveness related styles */
 @media screen and (max-width: 960px) {
   .tech-container {
@@ -183,9 +186,6 @@ export default {
   }
 }
 /* styles for elements inside tech-container */
-h1 {
-  text-decoration: none;
-}
 .tech-container {
   display: flex;
   flex-direction: column;
