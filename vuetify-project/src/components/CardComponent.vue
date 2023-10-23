@@ -3,7 +3,7 @@
   <v-card>
     <div class="card-image">
       <a @click.prevent="openInNewTab(itemHref)">
-        <v-img :src="itemImage" alt="Project Image"> </v-img>
+        <v-img :src="itemImage" :alt="itemAltImg"> </v-img>
       </a>
     </div>
     <v-card-title>
@@ -58,6 +58,7 @@ export default {
   itemTranslationKey: String,
   underText: String,
   itemTasks: Array, // Add this line for the itemTasks prop
+  itemAltImg: String,
 },
 
     data() {

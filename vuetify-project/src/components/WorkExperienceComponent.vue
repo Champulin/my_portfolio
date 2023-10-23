@@ -18,6 +18,7 @@
         :itemHref="item.href"
         :index="index"
         :underText="item.techStack"
+        :itemAltImg="item.alt"
       />
     </v-row>
   </v-container>

@@ -2,7 +2,7 @@
   <div :class="{ navbar: true, 'navbar-scrolled': isScrolled }">
     <v-app-bar v-if="isDesktop" class="desktop hidden-sm-and-down">
       <router-link to="/">
-        <v-img alt="VicenteLogo" :src="navBarLogo" min-width="350" />
+        <v-img alt="VicenteZurita" :src="navBarLogo" min-width="350" />
       </router-link>
       <v-spacer></v-spacer>
       <navigation-component :nav-buttons="navButtons" />

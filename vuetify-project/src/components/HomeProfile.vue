@@ -7,7 +7,11 @@
       <div class="row">
         <div class="column">
           <div class="photo-container">
-            <v-img :src="heroPicture" alt="Hero" class="hero-photo" />
+            <v-img
+              :src="heroPicture"
+              alt="VicenteZuritaProfile"
+              class="hero-photo"
+            />
           </div>
         </div>
         <div class="column">
@@ -22,7 +26,11 @@
       <div class="row">
         <div class="column">
           <div class="photo-container">
-            <v-img :src="heroPicture" alt="Hero" class="hero-photo" />
+            <v-img
+              :src="heroPicture"
+              alt="VicenteZuritaProfile"
+              class="hero-photo"
+            />
           </div>
         </div>
       </div>
@@ -44,7 +52,7 @@
           <div v-for="(item, index) in techStackIcons" :key="index">
             <v-icon
               :icon="'mdi-' + item.icon"
-              alt="Tech Icon"
+              :alt="item.name"
               class="tech-icon"
             >
             </v-icon>

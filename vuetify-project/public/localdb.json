@@ -17,7 +17,8 @@
         "features":"features",
         "techStack":"Django, Digital Ocean, Linux, Nginx, JS, HTML, CSS, Bootstrap5, PostgreSQL",
         "image": "../static/pgm_art.png",
-        "href":"https://pgm-artproduction.com"
+        "href":"https://pgm-artproduction.com",
+        "alt":"pgm-artproduction"
 
       },
       {
@@ -27,7 +28,8 @@
         "features":"features",
         "techStack":"Wordpress, WooCommerce, Stripe, CSS, JS",
         "image":"../static/lebonpot.png",
-        "href":"https://lebonpot.shop"
+        "href":"https://lebonpot.shop",
+        "alt":"lebonpot"
       },
       {
         "clientName":"School Project",
@@ -36,7 +38,8 @@
         "features":"features",
         "techStack": "Django, Angular, SASS, TypeScript, MongoDB, Pandas",
         "image":"../static/school_project.png",
-        "href":"https://github.com/Champulin/proyecto_duocuc"
+        "href":"https://github.com/Champulin/proyecto_duocuc",
+        "alt":"proyecto_titulo_duocuc"
       }
     ]
   ,"workExperience": [
@@ -55,7 +58,8 @@
     ],
     "techStack": "Django, Vue.js, Vuetify, DigitalOcean, MySQL, MongoSQL, PostgreSQL, ApacheSpark, BitBucket, Linux, PentahoETL",
     "href": "https://www.haddacloud.com",
-    "companyLogo": "../static/hadda_cloud.png"
+    "companyLogo": "../static/hadda_cloud.png",
+    "alt": "hadda_cloud"
   }
 ]
 ,
