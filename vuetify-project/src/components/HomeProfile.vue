@@ -9,7 +9,7 @@
           <div class="photo-container">
             <v-img
               :src="heroPicture"
-              alt="VicenteZuritaProfile"
+              alt="Vicente Zurita Profile"
               class="hero-photo"
             />
           </div>
