@@ -72,7 +72,7 @@
           <div v-for="(item, index) in devTools" :key="index">
             <v-icon
               :icon="'mdi-' + item.icon"
-              alt="Tech Icon"
+              :alt="item.name"
               class="tech-icon"
             >
             </v-icon>
