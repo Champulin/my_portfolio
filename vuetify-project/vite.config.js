@@ -24,8 +24,8 @@ export default defineConfig({
       google: {
         families: [
           {
-            name: "Roboto",
-            styles: "wght@100;300;400;500;700;900",
+            name: "Nunito",
+            styles: "wght@300;400;600;700",
           },
         ],
       },
