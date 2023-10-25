@@ -1,6 +1,6 @@
 <template>
-  <footer class="= d-grid d-column">
-    <div class="first-footer d-flex align-center w-100 rem-1.5">
+  <v-footer class="= d-grid d-column">
+    <div class="first-footer d-flex align-center w-100">
       <strong> {{ connectMsg }}</strong>
       <v-btn
         v-for="socials in socialMedia"
@@ -13,10 +13,10 @@
       ></v-btn>
     </div>
     <div class="px-4 py-2 bg-black text-center w-100">
-      {{ new Date().getFullYear() }} —
+      2023 —
       <strong>Created with Vue/Vuetify 3</strong>
     </div>
-  </footer>
+  </v-footer>
 </template>
 
 <script lang="js">
@@ -40,21 +40,17 @@ export default {
     } catch (error) {
       console.error('An error occurred:', error);
     }
-    window.addEventListener("resize", this.handleResize);
-  },
-  unmounted() {
-    window.removeEventListener("resize", this.handleResize);
   },
 };
 </script>
 <style scoped>
 .first-footer {
-  color: #747171;
+  /* color: #747171; */
   justify-content: center;
 }
 .first-footer strong {
   display: flex;
-  margin-right: 10px;
+  /* margin-right: 10px; */
 }
 .v-footer {
   padding: 0;
@@ -62,7 +58,7 @@ export default {
 }
 .v-btn {
   color: #4c948c;
-  background-color: #343a40;
+  /* background-color: #343a40; */
   border-color: #343a40;
 }
 </style>

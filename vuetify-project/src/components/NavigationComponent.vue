@@ -14,14 +14,13 @@
     </div>
   </v-tabs>
 </template>
-
 <script lang="js">
 export default {
     props: ['navButtons'],
   methods: {
   scrollTo(sectionName) {
     document.getElementById(sectionName).scrollIntoView({ behavior: 'smooth' });
-}
+    },
   }
 }
 </script>
@@ -38,14 +37,13 @@ export default {
     text-decoration: none;
     background-color: transparent;
     color: #343a40;
-    border-radius: 50px; /* This will give the buttons a rounded look */
-    transition: background-color 0.3s ease, transform 0.2s ease-in-out; /* Added transform transition */
+    border-radius: 50px;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+
     :hover {
       background-color: #343a40;
       color: #f8f9fa;
-      transform: scale(
-        1.05
-      ); /* Slightly increase the size of the button on hover */
+      transform: scale(1.05);
     }
   }
 }

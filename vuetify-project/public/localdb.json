@@ -63,47 +63,53 @@
   }
 ]
 ,
-  "navButtons": [
-    {
-      "sectionName": "about",
-      "href": "about"
-    },
-    {
-      "sectionName": "projects",
-      "href": "projects"
-    },
-    {
-      "sectionName": "workExperience",
-      "href": "work-experience"
-    }
-  ],
-  "socialMedia":[ 
-    {
-      "name": "LinkedIn",
-      "href": "https://www.linkedin.com/in/vicentezuritachfr/",
-      "icon": "mdi-linkedin"
-    },
-    {
-      "name": "GitHub",
-      "href": "https://github.com/Champulin/",
-      "icon": "mdi-github"}
+"socialMedia":[ 
+  {
+    "name": "LinkedIn",
+    "href": "https://www.linkedin.com/in/vicentezuritachfr/",
+    "icon": "mdi-linkedin"
+  },
+  {
+    "name": "GitHub",
+    "href": "https://github.com/Champulin/",
+    "icon": "mdi-github"}
   ],
   "heroPicture": "../static/hero.webp",
-  "navLogo": "../static/navbarlogo.webp",
- 
-      "techStackIcons": [
-        { "icon": "language-python", "name": "Python" },
-        { "icon": "language-html5", "name": "HTML5" },
-        { "icon": "language-css3", "name": "CSS3" },
-        { "icon": "language-javascript", "name": "JavaScript" },
-        { "icon": "vuejs", "name": "Vue.js" },
-        { "icon": "vuetify", "name": "Vuetify" }
-      ],
-      "devTools": [
-        { "icon": "github", "name": "GitHub" },
-        { "icon": "bitbucket", "name": "Bitbucket" },
-        { "icon": "jira", "name": "Jira" },
-        { "icon": "digital-ocean", "name": "Digital Ocean" }
-      ]
+  "navigation":{
+    "navButtons": [
+      {
+        "sectionName": "about",
+        "href": "about"
+      },
+      {
+        "sectionName": "projects",
+        "href": "projects"
+      },
+      {
+        "sectionName": "workExperience",
+        "href": "work-experience"
+      }
+    ],
+    "navLogo":{
+      "src":"../static/navbarlogo.webp",
+      "alt": "Vicente Zurita Logo"
+    } 
+  },
+  
+  
+  "techStackIcons": [
+    { "icon": "language-python", "name": "Python" },
+    { "icon": "vuejs", "name": "Vue.js" },
+    { "icon": "sass", "name": "sass" },
+    { "icon": "language-javascript", "name": "JavaScript" },
+    { "icon": "vuetify", "name": "Vuetify" },
+    { "icon": "language-css3", "name": "CSS3" }
+  ],
+  "devTools": [
+    { "icon": "github", "name": "GitHub" },
+    { "icon": "bitbucket", "name": "Bitbucket" },
+    { "icon": "jira", "name": "Jira" },
+    { "icon": "digital-ocean", "name": "Digital Ocean" }
+  ]
 
 }

@@ -2,12 +2,17 @@
   <div :class="{ navbar: true, 'navbar-scrolled': isScrolled }">
     <v-app-bar v-if="isDesktop" class="desktop hidden-sm-and-down">
       <router-link to="/">
-        <v-img alt="VicenteZurita" :src="navBarLogo" min-width="350" />
+        <v-img
+          class="logo-image"
+          :alt="navBarLogo.alt"
+          :src="navBarLogo.src"
+          min-width="350"
+        />
       </router-link>
       <v-spacer></v-spacer>
       <navigation-component :nav-buttons="navButtons" />
       <v-spacer></v-spacer>
-      <!-- <dark-mode /> -->
+      <dark-mode-component />
       <language-selector />
     </v-app-bar>
     <v-app-bar v-else class="mobile hidden-md-and-up">
@@ -17,13 +22,14 @@
           <v-img
             max-height="65"
             max-width="175"
-            containalt="VicenteLogo"
-            :src="navBarLogo"
+            :alt="navBarLogo.alt"
+            :src="navBarLogo.src"
             contain
           />
         </router-link>
       </v-toolbar-title>
       <v-spacer></v-spacer>
+      <dark-mode-component />
       <v-btn icon>
         <language-selector />
       </v-btn>
@@ -51,15 +57,15 @@
 </template>
 
 <script lang="js">
-// import DarkMode from '@/components/DarkMode.vue'
+import DarkModeComponent from '@/components/DarkModeComponent.vue'
 import NavigationComponent from '@/components/NavigationComponent.vue'
 import LanguageSelector from '@/components/LanguageSelector.vue'
 
 export default {
   components: {
-    NavigationComponent,
-    // DarkMode,
-    LanguageSelector,
+    NavigationComponent, // Buttons inside the navbar
+    DarkModeComponent, // Toggleable Dark Mode Button
+    LanguageSelector, //Select Display Language
   },
   data() {
     return {
@@ -74,8 +80,8 @@ export default {
     try {
       const response = await fetch('/localdb.json');
       const data = await response.json();
-      this.navButtons = data.navButtons;
-      this.navBarLogo = data.navLogo;
+      this.navButtons = data.navigation.navButtons;
+      this.navBarLogo = data.navigation.navLogo;
       console.log(this.navButtons);
     } catch (error) {
       console.error('An error occurred:', error);
@@ -133,41 +139,20 @@ export default {
   flex-direction: column;
   align-items: flex-start;
 }
-.v-app-bar.desktop.hidden-sm-and-down {
+.v-app-bar.desktop.hidden-sm-and-down,
+.v-app-bar.mobile.hidden-md-and-up {
   position: fixed !important;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000; /* You can adjust the z-index as needed */
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.9
-  ); /* Partially transparent white background */
-  /* Add any other styles you want for the sticky navbar */
+  z-index: 1000;
+  background-color: rgba(138, 201, 215, 0.9);
 }
 .v-navigation-drawer {
   position: fixed !important;
   height: max-content !important;
   width: auto !important;
 }
-
-.v-app-bar.mobile.hidden-md-and-up {
-  position: fixed !important;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000; /* You can adjust the z-index as needed */
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.9
-  ); /* Partially transparent white background */
-  /* Add any other styles you want for the sticky mobile navbar */
-}
-
 .v-application {
   max-height: 80px;
 }
