@@ -17,14 +17,15 @@
 <script lang="js">
 export default {
     props: ['navButtons'],
-  methods: {
-  scrollTo(sectionName) {
-    document.getElementById(sectionName).scrollIntoView({ behavior: 'smooth' });
-    },
-  }
 }
 </script>
 <style scoped>
+.v-theme--light {
+  color: black;
+}
+.v-theme--dark {
+  color: aliceblue;
+}
 .v-tabs {
   align-items: center;
   justify-content: center;
@@ -36,7 +37,6 @@ export default {
     text-align: center;
     text-decoration: none;
     background-color: transparent;
-    color: aliceblue;
     border-radius: 50px;
     transition: background-color 0.3s ease, transform 0.2s ease-in-out;
 
