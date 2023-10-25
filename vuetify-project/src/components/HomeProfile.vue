@@ -45,7 +45,7 @@
   <v-container class="tech-container">
     <div class="tech-row">
       <div class="stack-column">
-        <p>Tech Stack |</p>
+        <p>Tech Stack</p>
       </div>
       <div class="column">
         <div class="tech-stack">
@@ -56,7 +56,7 @@
               class="tech-icon"
             >
             </v-icon>
-            <v-tooltip activator="parent" location="bottom">
+            <v-tooltip activator="parent" location="top">
               {{ item.name }}</v-tooltip
             >
           </div>
@@ -65,7 +65,7 @@
     </div>
     <div class="tech-row">
       <div class="stack-column">
-        <p>Dev Tools |</p>
+        <p>Dev Tools</p>
       </div>
       <div class="column">
         <div class="tech-stack">
@@ -76,7 +76,7 @@
               class="tech-icon"
             >
             </v-icon>
-            <v-tooltip activator="parent" location="bottom">
+            <v-tooltip activator="parent" location="top">
               {{ item.name }}</v-tooltip
             >
           </div>
@@ -169,14 +169,13 @@ h1 {
       .photo-container {
         width: 200px;
         height: 200px;
-        border-radius: 70%;
+        border-radius: 50%;
         animation: breathe 5s ease-in-out infinite;
         overflow: hidden;
         .hero-photo {
           width: 100%;
           height: auto;
           max-height: fit-content;
-          border-radius: 50%;
           box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
           object-fit: cover;
           transition: all 0.3s ease;

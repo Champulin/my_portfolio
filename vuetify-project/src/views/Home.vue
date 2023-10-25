@@ -18,7 +18,7 @@ import WorkExperience from "@/components/WorkExperienceComponent.vue";
 </script>
 <style scoped>
 .container {
-  width: min(100%, 512px);
+  width: min(100%, 80vw);
   margin: auto;
 }
 </style>

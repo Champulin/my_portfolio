@@ -1,7 +1,5 @@
 <template>
-  <v-btn @click="toggleTheme">
-    <v-icon>{{ icon }}</v-icon>
-  </v-btn>
+  <v-btn :icon="icon" @click="toggleTheme"> </v-btn>
 </template>
 
 <script setup>

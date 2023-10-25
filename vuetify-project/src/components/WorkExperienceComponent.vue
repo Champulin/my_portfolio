@@ -4,22 +4,31 @@
     <v-row>
       <h1>{{ title }}</h1>
     </v-row>
-    <v-row v-for="(item, index) in workExperiences" :key="index">
-      <card-component
-        :itemTittle="item.companyName"
-        :itemSubtitle="
-          $t(item.translationKey + '.position') + ' (' + item.duration + ')'
-        "
-        :expandMsg="expandMsg"
-        :itemImage="item.companyLogo"
-        :itemContent="$t(item.translationKey + '.description')"
-        :itemTasks="item.tasks"
-        :itemTranslationKey="item.translationKey + '.tasks'"
-        :itemHref="item.href"
-        :index="index"
-        :underText="item.techStack"
-        :itemAltImg="item.alt"
-      />
+    <v-row>
+      <v-col
+        v-for="(item, index) in workExperiences"
+        :key="index"
+        class="card-container"
+        cols="12"
+        sm="6"
+        md="6"
+      >
+        <card-component
+          :itemTittle="item.companyName"
+          :itemSubtitle="
+            $t(item.translationKey + '.position') + ' (' + item.duration + ')'
+          "
+          :expandMsg="expandMsg"
+          :itemImage="item.companyLogo"
+          :itemContent="$t(item.translationKey + '.description')"
+          :itemTasks="item.tasks"
+          :itemTranslationKey="item.translationKey + '.tasks'"
+          :itemHref="item.href"
+          :index="index"
+          :underText="item.techStack"
+          :itemAltImg="item.alt"
+        />
+      </v-col>
     </v-row>
   </v-container>
 </template>
@@ -41,11 +50,19 @@ export default {
       const response = await fetch('/localdb.json');
       const data = await response.json();
       this.workExperiences = data.workExperience;
-      console.log(this.workExperiences);
     }catch(error) {
       console.error('An error occurred:', error);
     }
   }
 }
 </script>
-<style scoped></style>
+<style scoped>
+.v-row {
+  /* width: min(100%, 40vw); */
+}
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+</style>

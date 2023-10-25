@@ -82,7 +82,7 @@ export default {
       const data = await response.json();
       this.navButtons = data.navigation.navButtons;
       this.navBarLogo = data.navigation.navLogo;
-      console.log(this.navButtons);
+
     } catch (error) {
       console.error('An error occurred:', error);
     }
@@ -146,7 +146,7 @@ export default {
   left: 0;
   right: 0;
   z-index: 1000;
-  background-color: rgba(138, 201, 215, 0.9);
+  background-color: rgb(255, 255, 255, 0.9);
 }
 .v-navigation-drawer {
   position: fixed !important;

@@ -45,7 +45,7 @@ export default {
 </script>
 <style scoped>
 .first-footer {
-  /* color: #747171; */
+  padding: 0.3rem;
   justify-content: center;
 }
 .first-footer strong {

@@ -4,18 +4,26 @@
     <v-row class="title">
       <h1>{{ title }}</h1>
     </v-row>
-    <v-row v-for="(item, index) in projects" :key="index">
-      <card-component
-        :itemTittle="item.clientName"
-        :itemSubtitle="$t(item.translationKey + '.features')"
-        :expandMsg="expandMsg"
-        :itemImage="item.image"
-        :itemContent="$t(item.translationKey + '.description')"
-        :itemHref="item.href"
-        :index="index"
-        :underText="item.techStack"
-        :itemAltImg="item.alt"
-      />
+    <v-row>
+      <v-col
+        v-for="(item, index) in projects"
+        :key="index"
+        cols="12"
+        sm="4"
+        md="6"
+      >
+        <card-component
+          :itemTittle="item.clientName"
+          :itemSubtitle="$t(item.translationKey + '.features')"
+          :expandMsg="expandMsg"
+          :itemImage="item.image"
+          :itemContent="$t(item.translationKey + '.description')"
+          :itemHref="item.href"
+          :index="index"
+          :underText="item.techStack"
+          :itemAltImg="item.alt"
+        />
+      </v-col>
     </v-row>
   </v-container>
 </template>

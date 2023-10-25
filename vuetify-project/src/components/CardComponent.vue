@@ -10,7 +10,9 @@
       {{ itemTittle }}
     </v-card-title>
     <v-card-subtitle>
-      {{ itemSubtitle }}
+      <p>
+        {{ itemSubtitle }}
+      </p>
     </v-card-subtitle>
     <v-card-actions>
       <v-btn color="orange-lighten-2" variant="text" @click="toggleCard(index)">
@@ -79,9 +81,20 @@ export default {
 <style scoped>
 .v-card-subtitle {
   white-space: pre-wrap;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  /* -webkit-line-clamp: 2; */
+}
+.v-img {
+  max-height: 188px;
+  padding: 0.2rem;
 }
 .v-card-text ul {
   list-style-type: disc;
   padding-left: 2rem;
+}
+.card-image a:hover {
+  cursor: pointer;
 }
 </style>
