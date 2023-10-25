@@ -1,5 +1,5 @@
 <template>
-  <v-footer class="= d-grid d-column">
+  <v-footer class="= d-flex flex-column">
     <div class="first-footer d-flex align-center w-100">
       <strong> {{ connectMsg }}</strong>
       <v-btn
@@ -54,7 +54,7 @@ export default {
 }
 .v-footer {
   padding: 0;
-  background-color: rgb(136, 150, 150);
+  background-color: rgba(138, 201, 215, 0.9);
 }
 .v-btn {
   color: #4c948c;
