@@ -97,7 +97,4 @@ export default {
 .card-image a:hover {
   cursor: pointer;
 }
-.v-card {
-  max-width: 39vw;
-}
 </style>
