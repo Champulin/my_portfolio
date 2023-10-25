@@ -76,7 +76,7 @@
               class="tech-icon"
             >
             </v-icon>
-            <v-tooltip activator="parent" location="top">
+            <v-tooltip activator="parent" location="bottom">
               {{ item.name }}</v-tooltip
             >
           </div>
