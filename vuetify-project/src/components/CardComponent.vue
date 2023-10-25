@@ -89,6 +89,8 @@ export default {
 .v-img {
   max-height: 188px;
   padding: 0.2rem;
+  width: 100%;
+  object-fit: cover;
 }
 .v-card-text ul {
   list-style-type: disc;

@@ -57,9 +57,6 @@ export default {
 }
 </script>
 <style scoped>
-.v-row {
-  /* width: min(100%, 40vw); */
-}
 .card-container {
   display: flex;
   justify-content: center;
