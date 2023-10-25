@@ -84,10 +84,8 @@ export default {
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  /* -webkit-line-clamp: 2; */
 }
 .v-img {
-  max-height: 188px;
   padding: 0.2rem;
   width: 100%;
   object-fit: cover;
@@ -98,5 +96,8 @@ export default {
 }
 .card-image a:hover {
   cursor: pointer;
+}
+.v-card {
+  max-width: 39vw;
 }
 </style>

@@ -9,9 +9,6 @@
         v-for="(item, index) in workExperiences"
         :key="index"
         class="card-container"
-        cols="12"
-        sm="6"
-        md="6"
       >
         <card-component
           :itemTittle="item.companyName"
@@ -61,5 +58,8 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.v-img {
+  height: 100%;
 }
 </style>

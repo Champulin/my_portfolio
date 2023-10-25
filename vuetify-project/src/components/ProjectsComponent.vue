@@ -8,9 +8,7 @@
       <v-col
         v-for="(item, index) in projects"
         :key="index"
-        cols="12"
-        sm="4"
-        md="6"
+        class="v-col-12 v-col-sm-12 v-col-md-6 v-col-lg-4"
       >
         <card-component
           :itemTittle="item.clientName"

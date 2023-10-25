@@ -9,9 +9,8 @@
           min-width="350"
         />
       </router-link>
-      <v-spacer></v-spacer>
+      <v-spacer> </v-spacer>
       <navigation-component :nav-buttons="navButtons" />
-      <v-spacer></v-spacer>
       <dark-mode-component />
       <language-selector />
     </v-app-bar>

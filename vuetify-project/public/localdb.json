@@ -98,18 +98,18 @@
   
   
   "techStackIcons": [
-    { "icon": "language-python", "name": "Python" },
-    { "icon": "vuejs", "name": "Vue.js" },
-    { "icon": "sass", "name": "sass" },
-    { "icon": "language-javascript", "name": "JavaScript" },
-    { "icon": "vuetify", "name": "Vuetify" },
-    { "icon": "language-css3", "name": "CSS3" }
+    { "icon": "mdi-language-python", "name": "Python" },
+    { "icon": "mdi-vuejs", "name": "Vue.js" },
+    { "icon": "mdi-sass", "name": "sass" },
+    { "icon": "mdi-language-javascript", "name": "JavaScript" },
+    { "icon": "$vuetify", "name": "Vuetify" },
+    { "icon": "mdi-language-css3", "name": "CSS3" }
   ],
   "devTools": [
-    { "icon": "github", "name": "GitHub" },
-    { "icon": "bitbucket", "name": "Bitbucket" },
-    { "icon": "jira", "name": "Jira" },
-    { "icon": "digital-ocean", "name": "Digital Ocean" }
+    { "icon": "mdi-github", "name": "GitHub" },
+    { "icon": "mdi-bitbucket", "name": "Bitbucket" },
+    { "icon": "mdi-jira", "name": "Jira" },
+    { "icon": "mdi-digital-ocean", "name": "Digital Ocean" }
   ]
 
 }

@@ -50,11 +50,7 @@
       <div class="column">
         <div class="tech-stack">
           <div v-for="(item, index) in techStackIcons" :key="index">
-            <v-icon
-              :icon="'mdi-' + item.icon"
-              :alt="item.name"
-              class="tech-icon"
-            >
+            <v-icon :icon="item.icon" :alt="item.name" class="tech-icon">
             </v-icon>
             <v-tooltip activator="parent" location="top">
               {{ item.name }}</v-tooltip
@@ -70,11 +66,7 @@
       <div class="column">
         <div class="tech-stack">
           <div v-for="(item, index) in devTools" :key="index">
-            <v-icon
-              :icon="'mdi-' + item.icon"
-              :alt="item.name"
-              class="tech-icon"
-            >
+            <v-icon :icon="item.icon" :alt="item.name" class="tech-icon">
             </v-icon>
             <v-tooltip activator="parent" location="bottom">
               {{ item.name }}</v-tooltip
@@ -192,6 +184,7 @@ h1 {
     display: flex;
     justify-content: center;
     gap: 1rem;
+    padding: 0.5rem;
     .stack-column {
       display: flex;
       align-items: center;
@@ -206,12 +199,10 @@ h1 {
       justify-content: center;
       width: 100%;
       align-items: center;
-      gap: 0.25rem;
+      gap: 1rem;
       flex-wrap: wrap;
     }
     .tech-icon {
-      width: 50px;
-      height: 50px;
       transition: all 0.3s ease;
       object-fit: fit-content;
     }

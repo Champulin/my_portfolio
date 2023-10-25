@@ -16,5 +16,13 @@ export default createVuetify({
       window.matchMedia("(prefers-color-scheme: dark)").matches
         ? "dark"
         : "light",
+    themes: {
+      dark: {
+        background: "#121212", // Deep, rich background color
+        surface: "#121212", // Same as background color
+        primary: "#F5F5F5", // Off-white font color
+        // Any other colors can go here
+      },
+    },
   },
 });
