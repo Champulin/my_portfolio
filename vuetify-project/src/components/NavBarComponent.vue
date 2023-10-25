@@ -16,8 +16,8 @@
     </v-app-bar>
     <v-app-bar v-else class="mobile hidden-md-and-up">
       <v-app-bar-nav-icon @click="toggleDrawer"></v-app-bar-nav-icon>
-      <v-toolbar-title>
-        <router-link to="">
+      <router-link to="">
+        <v-toolbar-title>
           <v-img
             max-height="65"
             max-width="175"
@@ -25,8 +25,8 @@
             :src="navBarLogo.src"
             contain
           />
-        </router-link>
-      </v-toolbar-title>
+        </v-toolbar-title>
+      </router-link>
       <v-spacer></v-spacer>
       <dark-mode-component />
       <v-btn icon>
@@ -46,9 +46,9 @@
           </router-link>
         </v-list-item>
         <v-list-item v-for="(button, index) in navButtons" :key="index">
-          <a @click="scrollTo(button.href)" class="button-style">
+          <router-link :to="'/#' + button.href" class="button-style">
             {{ $t("navBar." + button.sectionName) }}
-          </a>
+          </router-link>
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
@@ -62,10 +62,10 @@ import LanguageSelector from '@/components/LanguageSelector.vue'
 
 export default {
   components: {
-    NavigationComponent, // Buttons inside the navbar
-    DarkModeComponent, // Toggleable Dark Mode Button
-    LanguageSelector, //Select Display Language
-  },
+    NavigationComponent,
+    DarkModeComponent,
+    LanguageSelector,
+},
   data() {
     return {
       isDesktop: window.innerWidth >= 960,
@@ -129,6 +129,8 @@ export default {
       }
     },
   },
+  //create a function to close my navigation drawer once a link is clicked
+
 };
 </script>
 
@@ -145,8 +147,6 @@ export default {
   left: 0;
   right: 0;
   z-index: 1000;
-  background-color: rgb(255, 255, 255, 0.9);
-  /* background-color: rgba(138, 201, 215, 0.9); */
 }
 .v-navigation-drawer {
   position: fixed !important;

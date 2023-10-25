@@ -36,7 +36,7 @@ export default {
     text-align: center;
     text-decoration: none;
     background-color: transparent;
-    color: #343a40;
+    color: aliceblue;
     border-radius: 50px;
     transition: background-color 0.3s ease, transform 0.2s ease-in-out;
 
