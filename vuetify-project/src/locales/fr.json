@@ -11,7 +11,7 @@
   },
   "aboutMe": {
     "aboutTitle": "À propos de moi",
-    "introParagraph": "Je suis un développeur originaire de Santiago, au Chili, diplômé en tant qu'analyste programmeur avec une affinité pour le développement backend. Je me concentre sur la résolution de problèmes et la production de code de qualité et évolutif. Actuellement résident à Marseille, en France.",
+    "introParagraph": "Je suis un développeur originaire de Santiago, au Chili, diplômé en tant qu'analyste programmeur avec une affinité pour le développement backend.  Je me concentre sur la résolution de problèmes et la production de code évolutif de qualité en utilisant les principes DRY et SOLID. \n Actuellement résident à Marseille, en France.",
     "aboutParagraph": "J'adore les échecs, les jeux vidéo, les animes et les voyages, et je suis passionné par la montage d'ordinateurs."
    },
   "componentMessages": {

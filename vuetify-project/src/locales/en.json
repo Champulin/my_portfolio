@@ -11,7 +11,7 @@
   },
   "aboutMe": {
     "aboutTitle": "Get to know a little about me",
-    "introParagraph": "I'm a developer from Santiago, Chile, graduated as a programmer analyst with an affinity for backend development. \n I focus on problem-solving and producing quality scalable code. I currently live in Marseille, France.",
+    "introParagraph": "I'm a developer from Santiago, Chile, graduated as a programmer analyst with an affinity for backend development. \n I focus on problem-solving and producing quality scalable code using DRY and SOLID principles. I currently live in Marseille, France.",
     "aboutParagraph": "I love chess, video games, anime, and traveling, also I'm a geek for building computers."
   },
   "componentMessages": {

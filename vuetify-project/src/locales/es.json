@@ -11,7 +11,7 @@
   },
   "aboutMe": {
     "aboutTitle": "Conoce un poco sobre mí",
-    "introParagraph": "Soy un desarrollador de Santiago, Chile, graduado como analista programador con afinidad por el desarrollo de backend. \n Me enfoco en la resolución de problemas y en producir código escalable de calidad. Actualmente vivo en Marsella, Francia.",
+    "introParagraph": "Soy un desarrollador de Santiago, Chile, graduado como analista programador con afinidad por el desarrollo de backend. \n Me enfoco en la resolución de problemas y en producir código escalable de calidad utilizando los principios SOLID y DRY. \n Actualmente vivo en Marsella, Francia.",
     "aboutParagraph": "Me encanta el ajedrez, los videojuegos, el anime y viajar, también soy un geek para armar computadoras."
   },
   "componentMessages": {
