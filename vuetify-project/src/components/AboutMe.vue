@@ -43,4 +43,9 @@ export default {
   flex-direction: column;
   gap: 0.5rem;
 }
+@media screen and (max-width: 960px) {
+  h1 {
+    font-size: 1.3rem;
+  }
+}
 </style>
