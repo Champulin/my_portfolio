@@ -32,20 +32,25 @@ export default {
   components: {
     CardComponent
   },
+  computed: {
+    expandMsg() {
+      return this.$t('componentMessages.knowMore');
+    },
+    title() {
+      return this.$t('navBar.projects');
+    }
+  },
   data() {
     return {
       projects: [],
-      expandMsg: this.$t('componentMessages.knowMore'),
-      title: this.$t('navBar.projects'),
     };
   },
-
   async mounted() {
     try {
       const response = await fetch("/localdb.json");
       const data = await response.json();
       this.projects = data.projects;
- } catch (error) {
+    } catch (error) {
       console.error("An error occurred:", error);
     }
   }

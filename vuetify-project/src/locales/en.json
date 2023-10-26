@@ -17,7 +17,9 @@
   "componentMessages": {
     "knowMore": "Details",
     "connect":"Connect with me on social media!",
-    "createdWith":"Created with Vue/Vuetify 3"
+    "createdWith":"Created with Vue/Vuetify 3",
+    "tasksMsg":"Tasks",
+    "technologies":"Technologies"
   },
   "freelanceProjects": {
     "pgm-artproduction": {

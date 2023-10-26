@@ -13,26 +13,30 @@
 
 <script lang="js">
 export default {
-    data() {
-        return {
-          title: this.$t('aboutMe.aboutTitle'),
-          intro: this.$t('aboutMe.introParagraph').split('\n').join('<br>'),
-          about: this.$t('aboutMe.aboutParagraph').split('\n').join('<br>'),
-        };
+  computed: {
+    title() {
+      return this.$t('aboutMe.aboutTitle');
     },
-    async mounted() {
-        window.addEventListener("resize", this.handleResize);
+    intro() {
+      return this.$t('aboutMe.introParagraph').split('\n').join('<br>');
+    },
+    about() {
+      return this.$t('aboutMe.aboutParagraph').split('\n').join('<br>');
+    }
+  },
+  async mounted() {
+    window.addEventListener("resize", this.handleResize);
   },
   unmounted() {
     window.removeEventListener("resize", this.handleResize);
-    }, methods: {
-        handleResize() {
-            this.isDesktop = window.innerWidth > 960;
-  }
-    },
+  },
+  methods: {
+    handleResize() {
+      this.isDesktop = window.innerWidth > 960;
+    }
+  },
 };
 </script>
-
 <style scoped>
 .resume-paragraph {
   display: flex;

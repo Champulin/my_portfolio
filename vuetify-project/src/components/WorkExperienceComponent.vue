@@ -24,6 +24,7 @@
           :index="index"
           :underText="item.techStack"
           :itemAltImg="item.alt"
+          :itemTaskMsg="tasksMsg"
         />
       </v-col>
     </v-row>
@@ -35,11 +36,20 @@ export default {
   components: {
     CardComponent
   },
+  computed: {
+    tasksMsg() {
+      return this.$t('componentMessages.tasksMsg');
+    },
+    expandMsg() {
+      return this.$t('componentMessages.knowMore');
+    },
+    title() {
+      return this.$t('navBar.workExperience');
+    }
+  },
   data() {
     return {
       workExperiences: [],
-      expandMsg: this.$t('componentMessages.knowMore'),
-      title: this.$t('navBar.workExperience'),
     };
   },
   async mounted() {

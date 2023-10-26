@@ -31,7 +31,7 @@
           {{ itemContent }}
         </v-card-text>
         <v-card-text v-if="itemTasks">
-          <strong>Tasks:</strong>
+          <strong>{{ itemTaskMsg }}</strong>
           <ul>
             <li v-for="(task, taskKey) in itemTasks" :key="taskKey">
               {{ $t(itemTranslationKey + "." + task) }}
@@ -41,7 +41,7 @@
       </div>
     </v-expand-transition>
     <v-card-text v-if="underText">
-      <strong> Technologies: {{ underText }} </strong>
+      <strong> {{ technologies }}: {{ underText }} </strong>
     </v-card-text>
   </v-card>
 </template>
@@ -61,11 +61,16 @@ export default {
   underText: String,
   itemTasks: Array, // Add this line for the itemTasks prop
   itemAltImg: String,
+  itemTaskMsg:String,
 },
-
+  computed:{
+  technologies() {
+    return this.$t("componentMessages.technologies");
+  },
+},
     data() {
         return {
-            show: [],
+          show: [],
         };
     },
     methods: {

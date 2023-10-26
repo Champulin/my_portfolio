@@ -41,12 +41,16 @@
     >
       <v-list dense>
         <v-list-item>
-          <router-link :to="'/'" class="button-style">
+          <router-link :to="'/'" class="button-style" @click="closeDrawer">
             {{ $t("navBar.home") }}
           </router-link>
         </v-list-item>
         <v-list-item v-for="(button, index) in navButtons" :key="index">
-          <router-link :to="'/#' + button.href" class="button-style">
+          <router-link
+            :to="'/#' + button.href"
+            class="button-style"
+            @click="closeDrawer"
+          >
             {{ $t("navBar." + button.sectionName) }}
           </router-link>
         </v-list-item>
@@ -129,7 +133,8 @@ export default {
       }
     },
   },
-  //create a function to close my navigation drawer once a link is clicked
+  //create a method to close my navigation drawer once a link is clicked
+
 
 };
 </script>

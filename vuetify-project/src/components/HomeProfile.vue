@@ -82,9 +82,6 @@ export default {
   data() {
     return {
       heroPicture: "",
-      title: "",
-      subtitle: "",
-      introParagraph: "",
       isDesktop: window.innerWidth >= 960,
       techStackPngs: [],
       techStackIcons: [],
@@ -96,9 +93,6 @@ export default {
       const response = await fetch("/localdb.json");
       const data = await response.json();
       this.heroPicture = data.heroPicture;
-      this.title = data.title;
-      this.subtitle = data.subtitle;
-      this.introParagraph = data.introParagraph;
       this.techStackPngs = data.techStackPngs;
       this.techStackIcons = data.techStackIcons;
       this.devTools = data.devTools;

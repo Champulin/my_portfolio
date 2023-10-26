@@ -1,0 +1,55 @@
+{
+  "navBar": {
+    "home": "Inicio",
+    "about": "Acerca de",
+    "projects": "Proyectos Freelance",
+    "workExperience": "Experiencia Laboral"
+  },
+  "homeProfile": {
+    "title": "Vicente Zurita",
+    "subtitle": "Desarrollador Web FullStack"
+  },
+  "aboutMe": {
+    "aboutTitle": "Conoce un poco sobre mí",
+    "introParagraph": "Soy un desarrollador de Santiago, Chile, graduado como analista programador con afinidad por el desarrollo de backend. Me enfoco en la resolución de problemas y en producir código escalable de calidad. Actualmente vivo en Marsella, Francia.",
+    "aboutParagraph": "Me encanta el ajedrez, los videojuegos, el anime y viajar, también soy un geek para armar computadoras."
+  },
+  "componentMessages": {
+    "knowMore": "Detalles",
+    "connect":"¡Conéctate conmigo en las redes sociales!",
+    "createdWith":"Creado con Vue/Vuetify 3",
+    "tasksMsg":"Tareas",
+    "technologies":"Tecnologías"
+  },
+  "freelanceProjects": {
+    "pgm-artproduction": {
+      "description": "Aplicación web de portafolio para un productor de arte local. Este sitio fue diseñado con el propósito de tener un portafolio modular en el que el usuario puede agregar nuevos proyectos. Cada proyecto también admite la inserción de videos de Vimeo y YouTube, así como un álbum de fotos con una cantidad variable de fotos para cada proyecto.",
+      "features": "CRUD, interfaz de administración, soporte para inserción de videos de Vimeo y YouTube, diseño responsive"
+    },
+    "lebonpot": {
+      "description": "Tienda online desarrollada en WordPress.",
+      "features": "Pagos con Stripe, creación de cuentas, notificaciones por correo electrónico, generación de facturas, diseño responsive."
+    },
+    "duocuc":{
+      "features":"Proyecto CRM para la escuela, desarrollado en equipo de 3",
+      "description":"CRUD, procesamiento de datos, inicio de sesión, descarga de informes, lectura y transformación a dataframe de archivos csv, diseño responsive, creación de API para el procesamiento y almacenamiento de datos, sistema de notificaciones."
+    }
+  },
+  "workExperience": {
+    "movatec": {
+      "position": "Desarrollador Full Stack",
+      "duration": "01/02/2023 - 01/06/2023",
+      "description": "Durante mi tiempo en Movatec, desempeñé varias funciones, principalmente en el sector back-end de su servicio HaddaCloud.",
+      "tasks": {
+        "task1": "Creación de un sistema automático de notificación por correo electrónico en Django.",
+        "task2": "Optimización del código existente utilizando los principios DRY y SOLID.",
+        "task3": "Creación de un nuevo servicio para los clientes de la empresa utilizando Vue.js y Nest.js.",
+        "task4": "Migración de un proceso ETL Pentaho a Apache Spark.",
+        "task5": "Creación de diagramas ETL para los clientes de la empresa."
+      }
+    }
+  },
+  "popUp": {
+    "popMsg": "Este sitio web está actualmente en construcción. Siéntete libre de navegar por él y contáctame si te gusta."
+  }
+}
