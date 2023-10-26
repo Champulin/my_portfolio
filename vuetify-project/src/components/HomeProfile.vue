@@ -156,19 +156,27 @@ h1 {
         width: 200px;
         height: 200px;
         border-radius: 50%;
-        animation: breathe 5s ease-in-out infinite;
+        animation: breathe 7s ease-in-out infinite;
         overflow: hidden;
         .hero-photo {
           width: 100%;
           height: auto;
           max-height: fit-content;
-          box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
           object-fit: cover;
           transition: all 0.3s ease;
         }
       }
     }
   }
+}
+.v-theme--light .photo-container {
+  box-shadow: 0px 4px 0.5rem rgba(0, 0, 0, 0.1);
+}
+.v-theme--dark .photo-container {
+  box-shadow: 0px 0px 0.1rem #9400d3, /* inner glow */ 0px 0px 0.2rem #9400d3,
+    /* middle glow */ 0px 0px 0.22rem #9400d3,
+    /* outer glow */ 0px 0px 0.4rem #9d66b5;
+  /* far outer glow */
 }
 /* styles for elements inside tech-container */
 .tech-container {
