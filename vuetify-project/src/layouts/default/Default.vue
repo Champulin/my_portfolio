@@ -3,8 +3,8 @@
   <v-app>
     <v-layout>
       <default-bar />
-      <!-- <v-spacer /> -->
       <v-main>
+        <v-spacer></v-spacer>
         <default-view />
       </v-main>
     </v-layout>

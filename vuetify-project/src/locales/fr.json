@@ -2,7 +2,7 @@
   "navBar": {
     "home": "Accueil",
     "about": "À propos",
-    "projects": "Projets Freelance",
+    "projects": "Projets freelance et personnels",
     "workExperience": "Expérience professionnelle"
   },
   "homeProfile": {
@@ -19,7 +19,8 @@
     "connect": "Connectez-vous avec moi sur les réseaux sociaux !",
     "createdWith":"Créé avec Vue3 et Vuetify",
     "tasksMsg":"Missions",
-    "technologies":"Technologies"
+    "technologies":"Technologies",
+    "contact":"Contactez-moi"
   },
   "freelanceProjects": {
     "pgm-artproduction": {

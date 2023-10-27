@@ -2,7 +2,7 @@
   "navBar": {
     "home": "Home",
     "about": "About",
-    "projects": "Freelance Projects",
+    "projects": "Freelance and Personal Projects",
     "workExperience": "Work Experience"
   },
   "homeProfile": {
@@ -19,7 +19,8 @@
     "connect":"Connect with me on social media!",
     "createdWith":"Created with Vue/Vuetify 3",
     "tasksMsg":"Tasks",
-    "technologies":"Technologies"
+    "technologies":"Technologies",
+    "contact":"Contact me"
   },
   "freelanceProjects": {
     "pgm-artproduction": {
@@ -33,7 +34,11 @@
     "duocuc":{
       "features":"CRM project for the school, developed in a team of 3",
       "description":"CRUD, data processing, login, report downloading, csv file reading and transformation to dataframe, responsive design, creation of API for the processing and storing of data, notification system."
-    }
+    },
+    "thisWebsite":{
+        "features":"Responsive design, multilanguage support, dark mode, animations, pop-up message.",
+        "description":"This website was created with the purpose of showcasing my skills as a developer, it will be in constant growth with the add of new projects."
+      }
   },
   "workExperience": {
     "movatec": {

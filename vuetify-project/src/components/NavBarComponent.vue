@@ -1,14 +1,12 @@
 <template>
   <div :class="{ navbar: true, 'navbar-scrolled': isScrolled }">
     <v-app-bar v-if="isDesktop" class="desktop hidden-sm-and-down">
-      <router-link to="/">
-        <v-img
-          class="logo-image"
-          :alt="navBarLogo.alt"
-          :src="navBarLogo.src"
-          min-width="350"
-        />
-      </router-link>
+      <div class="nav-title-container">
+        <v-app-bar-title>
+          {{ navBarLogo.logo }}
+        </v-app-bar-title>
+      </div>
+      <v-img class="logo-image" :alt="navBarLogo.alt" :src="navBarLogo.src" />
       <v-spacer> </v-spacer>
       <navigation-component :nav-buttons="navButtons" />
       <dark-mode-component />
@@ -16,17 +14,6 @@
     </v-app-bar>
     <v-app-bar v-else class="mobile hidden-md-and-up">
       <v-app-bar-nav-icon @click="toggleDrawer"></v-app-bar-nav-icon>
-      <router-link to="">
-        <v-toolbar-title>
-          <v-img
-            max-height="65"
-            max-width="175"
-            :alt="navBarLogo.alt"
-            :src="navBarLogo.src"
-            contain
-          />
-        </v-toolbar-title>
-      </router-link>
       <v-spacer></v-spacer>
       <dark-mode-component />
       <v-btn icon>
@@ -39,21 +26,22 @@
       class="hidden-md-and-up"
       style="height: 100%; overflow-y: auto"
     >
-      <v-list dense>
-        <v-list-item>
-          <router-link :to="'/'" class="button-style" @click="closeDrawer">
+      <v-list color="transparent">
+        <router-link :to="'/'" class="button-style">
+          <v-list-item @click="toggleDrawer">
             {{ $t("navBar.home") }}
-          </router-link>
-        </v-list-item>
-        <v-list-item v-for="(button, index) in navButtons" :key="index">
-          <router-link
-            :to="'/#' + button.href"
-            class="button-style"
-            @click="closeDrawer"
-          >
+          </v-list-item>
+        </router-link>
+        <router-link
+          v-for="(button, index) in navButtons"
+          :key="index"
+          :to="'/#' + button.href"
+          class="button-style"
+        >
+          <v-list-item @click="toggleDrawer">
             {{ $t("navBar." + button.sectionName) }}
-          </router-link>
-        </v-list-item>
+          </v-list-item>
+        </router-link>
       </v-list>
     </v-navigation-drawer>
   </div>
@@ -85,7 +73,6 @@ export default {
       const data = await response.json();
       this.navButtons = data.navigation.navButtons;
       this.navBarLogo = data.navigation.navLogo;
-
     } catch (error) {
       console.error('An error occurred:', error);
     }
@@ -135,15 +122,21 @@ export default {
   },
   //create a method to close my navigation drawer once a link is clicked
 
+  //trigger toggle drawer again when a link on the drawer is clicked
+
+
+
 
 };
 </script>
 
 <style scoped>
-.tech-container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+.nav-title-container {
+  padding-left: 2rem;
+}
+.v-app-bar-title {
+  min-width: none;
+  font-size: 1.5rem;
 }
 .v-app-bar.desktop.hidden-sm-and-down,
 .v-app-bar.mobile.hidden-md-and-up {
@@ -153,6 +146,9 @@ export default {
   right: 0;
   z-index: 1000;
 }
+.v-img {
+  height: 35px;
+}
 .v-navigation-drawer {
   position: fixed !important;
   height: max-content !important;
@@ -160,5 +156,9 @@ export default {
 }
 .v-application {
   max-height: 80px;
+}
+a {
+  color: inherit;
+  text-decoration: none;
 }
 </style>

@@ -41,10 +41,15 @@ export default {
     transition: background-color 0.3s ease, transform 0.2s ease-in-out;
 
     :hover {
-      background-color: #343a40;
       color: #f8f9fa;
       transform: scale(1.05);
     }
   }
+}
+.v-theme--dark .v-tab:hover {
+  background-color: rgba(27, 63, 95, 0.455);
+}
+.v-theme--light .v-tab:hover {
+  background-color: rgba(138, 201, 215, 0.9);
 }
 </style>

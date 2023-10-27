@@ -17,6 +17,21 @@
         <div class="column">
           <h1>{{ $t("homeProfile.title") }}</h1>
           <h2>{{ $t("homeProfile.subtitle") }}</h2>
+          <div class="row contact-row">
+            <span>
+              {{ contactMe }}
+            </span>
+            <v-btn
+              v-for="socials in socialMedia"
+              :key="socials"
+              class="mx-4"
+              :icon="socials.icon"
+              :href="socials.href"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+            </v-btn>
+          </div>
         </div>
       </div>
     </div>
@@ -38,6 +53,21 @@
         <div class="column">
           <h1>{{ $t("homeProfile.title") }}</h1>
           <h2>{{ $t("homeProfile.subtitle") }}</h2>
+          <div class="row contact-row">
+            <span>
+              {{ contactMe }}
+            </span>
+            <v-btn
+              v-for="socials in socialMedia"
+              :key="socials"
+              class="mx-4"
+              :icon="socials.icon"
+              :href="socials.href"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+            </v-btn>
+          </div>
         </div>
       </div>
     </div>
@@ -86,6 +116,8 @@ export default {
       techStackPngs: [],
       techStackIcons: [],
       devTools: [],
+      contactMe: this.$t("componentMessages.contact"),
+      socialMedia: [],
     };
   },
   async mounted() {
@@ -96,6 +128,7 @@ export default {
       this.techStackPngs = data.techStackPngs;
       this.techStackIcons = data.techStackIcons;
       this.devTools = data.devTools;
+      this.socialMedia = data.socialMedia;
     } catch (error) {
       console.error("An error occurred:", error);
     }
@@ -116,6 +149,9 @@ export default {
 h1 {
   text-decoration: none; /* to remove underline generated from main.scss */
 }
+h2 {
+  padding-bottom: 0.5rem;
+}
 /* responsiveness related styles */
 @media screen and (max-width: 960px) {
   .tech-container {
@@ -132,6 +168,11 @@ h1 {
     align-items: center;
   }
 }
+.v-btn {
+  color: #4c948c;
+  /* background-color: #343a40; */
+  border-color: #343a40;
+}
 /* styles for elements inside hero-container */
 .hero-container {
   padding: 1.5rem;
@@ -146,6 +187,8 @@ h1 {
       display: flex;
       justify-content: center;
       gap: 1rem;
+      align-items: center;
+
       .column {
         display: flex;
         flex-direction: column;
@@ -169,14 +212,31 @@ h1 {
     }
   }
 }
+span {
+  font-weight: bold;
+}
 .v-theme--light .photo-container {
-  box-shadow: 0px 4px 0.5rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 0.5rem rgb(0, 0, 0);
 }
 .v-theme--dark .photo-container {
   box-shadow: 0px 0px 0.1rem #9400d3, /* inner glow */ 0px 0px 0.2rem #9400d3,
     /* middle glow */ 0px 0px 0.22rem #9400d3,
     /* outer glow */ 0px 0px 0.4rem #9d66b5;
   /* far outer glow */
+}
+.v-theme--light .contact-row {
+  background-color: rgb(138, 201, 215);
+  box-shadow: 0px 4px 0.5rem rgb(0, 0, 0);
+}
+.v-theme--dark .contact-row {
+  background-color: rgba(27, 63, 95, 0.455);
+  box-shadow: 0px 0px 0.1rem #9400d3, /* inner glow */ 0px 0px 0.2rem #9400d3,
+    /* middle glow */ 0px 0px 0.22rem #9400d3,
+    /* outer glow */ 0px 0px 0.4rem #9d66b5;
+}
+.contact-row {
+  padding: 0.3em;
+  border-radius: 15%;
 }
 /* styles for elements inside tech-container */
 .tech-container {
