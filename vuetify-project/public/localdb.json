@@ -44,16 +44,6 @@
         "image":"../static/school_project.webp",
         "href":"https://github.com/Champulin/proyecto_duocuc",
         "alt":"proyecto_titulo_duocuc"
-      },
-      {
-        "clientName":"This Website",
-        "translationKey": "freelanceProjects.thisWebsite",
-        "description":"description",
-        "features":"features",
-        "techStack":"Vue3/Vuetify, Vite, i18n, SASS, JS",
-        "image":"../static/my_portfolio_image.webp",
-        "href":"https://github.com/Champulin/my_portfolio",
-        "alt":"vicente_zurita_portfolio"
       }
     ]
   ,"workExperience": [
