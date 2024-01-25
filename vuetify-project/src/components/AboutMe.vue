@@ -1,20 +1,22 @@
 <template>
-  <div id="about" class="about-container container">
-    <div class="title">
-      <h2>{{ $t("message.aboutTitle") }}</h2>
-    </div>
-    <div class="row resume-paragraph">
-      <p v-html="$t('message.introParagraph').split('\n').join('<br>')"></p>
-      <p v-html="$t('message.aboutParagraph').split('\n').join('<br>')"></p>
-    </div>
-  </div>
+  <v-container class="about-container">
+    <v-row class="title">
+      <h1>{{ title }}</h1>
+    </v-row>
+    <v-row class="row resume-paragraph">
+      <p v-html="intro"></p>
+      <p v-html="about"></p>
+    </v-row>
+  </v-container>
 </template>
 
 <script lang="js">
 export default {
     data() {
         return {
-
+          title: this.$t('aboutMe.aboutTitle'),
+          intro: this.$t('aboutMe.introParagraph').split('\n').join('<br>'),
+          about: this.$t('aboutMe.aboutParagraph').split('\n').join('<br>'),
         };
     },
     async mounted() {

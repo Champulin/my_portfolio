@@ -1,15 +1,53 @@
 {
-  "message":{
-    "title": "Vicente Zurita",
-    "subtitle": "Backend Developer",
-    "aboutTitle":"Get to know a little about me",
-    "introParagraph": "I'm a developper from Santiago, Chile graduated from programmer analyst with an affinity for backend developement.\n I focus on problem solving and producing quality scalable code currently living in Marseille, France.",
-    "aboutParagraph": "I love  Chess, Videogames, Anime and traveling and i'm a geek for building computers",
+  "navBar": {
     "home": "Home",
     "about": "About",
-    "projects": "Projects",
-    "workExperience": "Work Experience",
-    "connect": "Connect with me on social networks!",
-    "knowMore":"Details"
+    "projects": "Freelance Projects",
+    "workExperience": "Work Experience"
+  },
+  "homeProfile": {
+    "title": "Vicente Zurita",
+    "subtitle": "FullStack Web Developer"
+  },
+  "aboutMe": {
+    "aboutTitle": "Get to know a little about me",
+    "introParagraph": "I'm a developer from Santiago, Chile, graduated as a programmer analyst with an affinity for backend development. I focus on problem-solving and producing quality scalable code. I currently live in Marseille, France.",
+    "aboutParagraph": "I love chess, video games, anime, and traveling, and I'm a geek for building computers."
+  },
+  "componentMessages": {
+    "knowMore": "Details",
+    "connect":"Connect with me on social networks!",
+    "createdWith":"Created with Vue/Vuetify 3"
+  },
+  "freelanceProjects": {
+    "pgm-artproduction": {
+      "description": "Portfolio web app for a local art producer. This site was designed with the purpose of having a modular portfolio in which the user can add new projects. Each project also supports Vimeo and YouTube video insertion, as well as a photo album with a variable quantity of photos for each project.",
+      "features": "CRUD, admin interface, support for Vimeo and YouTube video insertion, responsive design"
+    },
+    "lebonpot": {
+      "description": "Online shop developed in WordPress.",
+      "features": "Payments with Stripe, account creation, email notifications, invoice generation, responsive design."
+    },
+    "duocuc":{
+      "features":"CRM project for the school, developed in a team of 3",
+      "description":"CRUD, data processing, login, report downloading, csv file reading and transformation to dataframe, responsive design, creation of API for the processing and storing of data, notification system."
+    }
+  },
+  "workExperience": {
+    "movatec": {
+      "position": "Full Stack Developer",
+      "duration": "01/02/2023 - 01/06/2023",
+      "description": "During my time at Movatec, I performed various functions, primarily in the back-end sector of their HaddaCloud service.",
+      "tasks": {
+        "task1": "Creation of an automatic email notification system in Django.",
+        "task2": "Optimization of existing code using DRY and SOLID principles.",
+        "task3": "Creation of a new service for the company's clients using Vue.js and Nest.js.",
+        "task4": "Migration of a Pentaho ETL process to Apache Spark.",
+        "task5": "Creation of ETL diagrams for the company's clients."
+      }
+    }
+  },
+  "popUp": {
+    "popMsg": "This website is currently under construction. Feel free to navigate through it and contact me if you like it."
   }
 }

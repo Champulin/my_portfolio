@@ -1,5 +1,5 @@
 <template>
-  <div class="navbar">
+  <div :class="{ navbar: true, 'navbar-scrolled': isScrolled }">
     <v-app-bar v-if="isDesktop" class="desktop hidden-sm-and-down">
       <router-link to="/">
         <v-img alt="VicenteLogo" :src="navBarLogo" min-width="350" />
@@ -23,6 +23,10 @@
           />
         </router-link>
       </v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-btn icon>
+        <language-selector />
+      </v-btn>
     </v-app-bar>
     <v-navigation-drawer
       v-model="drawer"
@@ -33,13 +37,13 @@
       <v-list dense>
         <v-list-item>
           <router-link :to="'/'" class="button-style">
-            {{ $t("message.home") }}
+            {{ $t("navBar.home") }}
           </router-link>
         </v-list-item>
         <v-list-item v-for="(button, index) in navButtons" :key="index">
-          <router-link :to="'/#' + (button.href || '')" class="button-style">
-            {{ $t("message." + button.sectionName) }}
-          </router-link>
+          <a @click="scrollTo(button.href)" class="button-style">
+            {{ $t("navBar." + button.sectionName) }}
+          </a>
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
@@ -52,17 +56,18 @@ import NavigationComponent from '@/components/NavigationComponent.vue'
 import LanguageSelector from '@/components/LanguageSelector.vue'
 
 export default {
-    components: {
+  components: {
     NavigationComponent,
     // DarkMode,
     LanguageSelector,
-    },
+  },
   data() {
     return {
       isDesktop: window.innerWidth >= 960,
       navButtons: [],
       drawer: false,
       navBarLogo: "",
+      isScrolled: false,
     };
   },
   async mounted() {
@@ -76,9 +81,11 @@ export default {
       console.error('An error occurred:', error);
     }
     window.addEventListener("resize", this.handleResize);
+    window.addEventListener("scroll", this.handleScroll); // Added event listener for scrolling
   },
   unmounted() {
     window.removeEventListener("resize", this.handleResize);
+    window.removeEventListener("scroll", this.handleScroll); // Removed event listener
   },
   methods: {
     toggleDrawer() {
@@ -87,13 +94,36 @@ export default {
     handleResize() {
       this.isDesktop = window.innerWidth > 960;
     },
-  scrollTo(sectionName) {
-    this.$nextTick(() => {
-      document.getElementById(sectionName).scrollIntoView({ behavior: 'smooth' });
-    });
-  },
-}
+    scrollTo(sectionName) {
+      const offset = this.isDesktop ? 100 : 80; // Adjust this value as needed
 
+      this.$nextTick(() => {
+        const targetElement = document.getElementById(sectionName);
+        if (targetElement) {
+          const targetOffset = targetElement.getBoundingClientRect().top;
+          const scrollToPosition = targetOffset - offset;
+          window.scrollTo({
+            top: window.scrollY + scrollToPosition,
+            behavior: 'smooth',
+          });
+        }
+      });
+    },
+
+    handleScroll() {
+      // Calculate scroll position
+      const scrollPosition = window.scrollY;
+      // Set the isScrolled to true if the scrollPosition is greater than 0
+      this.isScrolled = scrollPosition > 0;
+      // Update navbar class based on isScrolled
+      const navbar = document.querySelector(".navbar");
+      if (this.isScrolled) {
+        navbar.classList.add("navbar-scrolled");
+      } else {
+        navbar.classList.remove("navbar-scrolled");
+      }
+    },
+  },
 };
 </script>
 
@@ -109,7 +139,12 @@ export default {
   left: 0;
   right: 0;
   z-index: 1000; /* You can adjust the z-index as needed */
-  background-color: white; /* Set the desired background color for the navbar */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* Partially transparent white background */
   /* Add any other styles you want for the sticky navbar */
 }
 .v-navigation-drawer {
@@ -124,7 +159,12 @@ export default {
   left: 0;
   right: 0;
   z-index: 1000; /* You can adjust the z-index as needed */
-  background-color: white; /* Set the desired background color for the mobile navbar */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* Partially transparent white background */
   /* Add any other styles you want for the sticky mobile navbar */
 }
 .row {
