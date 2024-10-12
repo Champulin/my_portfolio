@@ -55,7 +55,18 @@
       "task3": "Création d'un nouveau service pour les clients de l'entreprise via Vue.js et NestJs.",
       "task4": "Migration d'un processus Pentaho ETL vers Apache Spark.",
       "task5": "Création de diagrammes ETL pour les clients de l'entreprise."
-    }
+    },"formideo": {
+  "position": "Développeur Full Stack",
+  "duration": "01/02/2024 - Présent",
+  "description": "J'ai travaillé à la création de leur nouveau site web webformideo.formideosante.fr et je développe actuellement la nouvelle plateforme d'apprentissage de Formideo",
+  "tasks": {
+    "task1": "Création du site web webformideo.formideosante.fr",
+    "task2": "Assurer la réactivité sur différents appareils",
+    "task3": "Optimisation des temps de chargement",
+    "task4": "Conceptualisation et développement de la nouvelle plateforme d'apprentissage"
+  }
+}
+
   }
 },
   "popUp": {

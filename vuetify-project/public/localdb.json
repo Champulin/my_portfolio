@@ -64,6 +64,23 @@
     "href": "https://www.haddacloud.com",
     "companyLogo": "../static/hadda_cloud.webp",
     "alt": "hadda_cloud"
+  },
+  {
+    "companyName": "Formideo",
+    "translationKey":"workExperience.formideo",
+    "position": "Full Stack Developer",
+    "duration": "01/02/2024-Present",
+    "description": "description",
+    "tasks": [
+      "task1",
+      "task2",
+      "task3",
+      "task4"
+    ],
+    "techStack": "NextJS, Typescript",
+    "href": "https://webformideo.formideosante.fr",
+    "companyLogo": "../static/formideologo.png",
+    "alt": "formideo"
   }
 ]
 ,

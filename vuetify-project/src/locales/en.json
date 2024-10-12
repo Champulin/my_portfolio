@@ -52,6 +52,17 @@
         "task4": "Migration of a Pentaho ETL process to Apache Spark.",
         "task5": "Creation of ETL diagrams for the company's clients."
       }
+    },
+    "formideo":{
+      "position":"Full Stack Developer",
+      "duration":"01/02/2024 - Present",
+      "description":"I've worked creating their new site webformideo.formideosante.fr and now i'm currently developping Formideo's new learning platform ",
+      "tasks":{
+        "task1":"Creation of the website webformideo.formideosante.fr",
+        "task2":  "Asuring responsivenes in different devices",
+        "task3":"Optimization of load times",
+        "task4":"Conceptualization and development of the new learning platform"
+      }
     }
   },
   "popUp": {

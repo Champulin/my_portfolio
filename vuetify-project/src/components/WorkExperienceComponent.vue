@@ -8,7 +8,7 @@
       <v-col
         v-for="(item, index) in workExperiences"
         :key="index"
-        class="card-container v-col-12 v-col-sm-12 v-col-md-6 v-col-lg-6"
+        class="card-container v-col-12 v-col-sm-12 v-col-md-6 v-col-lg-6 "
       >
         <card-component
           :itemTittle="item.companyName"
@@ -68,6 +68,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 500px;
 }
 .v-img {
   height: 100%;
