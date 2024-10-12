@@ -49,7 +49,19 @@
       ],
       "techStack":"Django, Vue.js, Vuetify, DigitalOcean, MySQL, MongoSQL, PostgreSQL, ApacheSpark, BitBucket, Linux, PentahoETL"
       ,"href":"https://www.haddacloud.com"
-    }
+    },{
+      "companyName": "Formideo Sante",
+      "position": "Full Stack Developper",
+      "startDate":"01-02-2024",
+      "endDate":"present",
+      "description":"I've worked creating their new site webformideo.formideosante.fr and now i'm currently developping Formideo's new learning platform "
+      ,"tasks":["Creation of the website webformideo.formideosante.fr",
+      "Asuring responsivenes in different devices",
+        "Optimization of load times",
+      "Conceptualization and development of the new learning platform"],
+      "techStack":"NextJS, TailwindCSS",
+      "href":"https://webformideo.formideosante.fr"
+          }
   ],
   "navButtons": [
     {
